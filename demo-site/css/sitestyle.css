@@ -5,8 +5,15 @@
 }
 
 #intro {
-    text-align: center;
-    padding: 20vh 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    margin: auto;
+}
+
+#intro #code-logo {
+    font-size: 20rem;
 }
 
 #typography #headers-list {
