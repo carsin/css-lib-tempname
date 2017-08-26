@@ -6,32 +6,81 @@
 
 /* -----------[ Global & Base Styles ]---------- */
 
-@import url('https://fonts.googleapis.com/css?family=Montserrat:400');
+/* Import fonts */
+@import url('https://fonts.googleapis.com/css?family=Raleway:400');
 
 html, body {
     padding: 0;
     margin: 0;
     font-size: 1.5em;
-    font-family: "Montserrat", sans-serif;
+    font-family: "Raleway", sans-serif;
     line-height: 1.5;
-    font-weight: 300;
-    background-color: #3C3C3B;
-    color: #FAFAFA;
+    background-color: #292929;
+    color: #e8e8e8;
 }
 
+/* 1 rem = 10px */
 html {
     font-size: 62.5%; 
 }
 
 .container {
-    margin: 0 auto;
     width: 100%;
     max-width: 1200px;
     padding: 0 0.5rem;
+    margin: 0 auto;
+}
+
+.text-center {
+    text-align: center;
+}
+
+@media (max-width: 960px) {
+    .container {
+        padding: 0;
+    }
 }
 
 /* -----------[ Typography ]---------- */
 
 h1, h2, h3, h4, h5, h6 {
+    font-weight: 400;
     margin: 0;
+    padding: 0;
+}
+
+h1 {
+    font-size: 4rem;
+}
+
+h2 {
+    font-size: 3.5rem;
+}
+
+h3 {
+    font-size: 3rem;
+}
+
+h4 {
+    font-size: 2.5rem;
+}
+
+h5 {
+    font-size: 2rem;
+}
+
+h6 {
+    font-size: 1.5rem;
+}
+
+/* Paragraphs */
+
+p {
+    margin: 0;
+    font-size: 1.7rem;
+}
+
+p.lead {
+    font-weight: 400;
+    font-size: 2rem;
 }

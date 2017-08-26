@@ -1,3 +1,15 @@
+.container {
+    /* Border for testing purposes */
+    border-left: 1px solid #212121;
+    border-right: 1px solid #212121;
+}
+
 #intro {
     text-align: center;
+}
+
+#typography #headers-list {
+    border: 1px solid #191919;
+    display: inline-block;
+    padding: 1vh 2vw;
 }
