@@ -6,9 +6,11 @@
 
 /* -----------[ Global & Base Styles ]---------- */
 
-/* Import fonts 
+/*
+ * Import fonts 
  * For now, I'm going with Raleway.
  * Inspired by Skeleton <3
+ *
  */
 
 @import url('https://fonts.googleapis.com/css?family=Raleway:400');
@@ -54,7 +56,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 h1 {
-    font-size: 4rem;
+    font-size: 4.2rem;
 }
 
 h2 {
