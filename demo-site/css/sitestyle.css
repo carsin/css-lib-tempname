@@ -16,8 +16,17 @@
     font-size: 20rem;
 }
 
-#typography #headers-list {
+#typography #text-list {
     border: 1px solid #191919;
     display: inline-block;
     padding: 1vh 2vw;
+}
+
+#article-header p {
+    margin-bottom: 5vh;
+}
+
+#article-header h2, #article-header h4, #article-header p {
+    text-transform: uppercase;
+    letter-spacing: 0.1vw;
 }
