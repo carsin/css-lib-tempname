@@ -49,46 +49,58 @@ html {
     }
 }
 
+hr.divider {
+    max-width: 1500px;
+    margin: 7vh auto;
+    border: 1px solid #242424;
+}
+
 /* -----------[ Typography ]---------- */
 
 h1, h2, h3, h4, h5, h6 {
-    font-weight: 400;
-    margin: 0 0 0.8vh 0;
+    margin: 0 0 0.5rem 0;
     padding: 0;
+    font-weight: 300;
 }
 
 h1 {
-    font-size: 4rem;
+    font-size: 4rem; /* Fallback */
+    font-size: 6vh;
     line-height: 1.2;
     letter-spacing: .2rem;
 }
 
 h2 {
-    font-size: 3.6rem;
+    font-size: 3.6rem; /* Fallback */
+    font-size: 4.6vh;
     line-height: 1.25;
     letter-spacing: .1rem;
 }
 
 h3 {
-    font-size: 3.2rem;
+    font-size: 3.2rem; /* Fallback */
+    font-size: 4.2vh;
     line-height: 1.3;
     letter-spacing: -.1rem;
 }
 
 h4 {
-    font-size: 2.8rem;
+    font-size: 2.8rem; /* Fallback */
+    font-size: 3.4vh;
     line-height: 1.35;
     letter-spacing: -.05rem;
 }
 
 h5 {
-    font-size: 2.4rem;
+    font-size: 2.4rem; /* Fallback */
+    font-size: 3vh;
     line-height: 1.4;
     letter-spacing: 0;
 }
 
 h6 {
-    font-size: 2.1rem;
+    font-size: 2.1rem; /* Fallback */
+    font-size: 2.6vh;
     line-height: 1.45;
     letter-spacing: 0;
 }
