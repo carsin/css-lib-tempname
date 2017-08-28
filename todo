@@ -1,9 +1,13 @@
 TODO LIST
 PRIORITY BY NUMBER
-1. Basic sizing and html structuring
-2. Typography
-2. Responsiveness
-3. Grid
+1. Grid optimizations
 4. Basic elements styling
     a. Links
     b. Buttons
+
+COMPLETE:
+8/26/17 Basic sizing and html structuring
+
+WIP: 
+2. Typography
+2. Responsiveness
