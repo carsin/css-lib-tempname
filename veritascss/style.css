@@ -47,6 +47,13 @@ h6 { font-size: 2.1rem; font-size: 3vh;   line-height: 1.45; letter-spacing: 0; 
 p { font-size: 1.7rem; /* Fallback */ font-size: 2.7vh; margin: 0; }
 p.lead { font-size: 2rem; font-size: 3.3vh; font-weight: 600; }
 
+/* STRONG */
+strong, .bold { font-weight: 900; }
+
+/* EMPHASIS */
+em {
+    font-weight: 200;   
+}
 /* -----------[ 3. Elements ]---------- */
 
 /* HR DIVIDERS */
@@ -65,6 +72,31 @@ a:hover {
     color: #007cad;
     transition: 0.2s;
 }
+
+/* BUTTONS */
+button, input[type="reset"], input[type="button"] {
+    font-family: "Raleway", sans-serif;
+    display: inline-block;
+    text-decoration: none;
+    height: 40px;
+    text-transform: uppercase;
+    background-color: #3dc3e5;
+    border: none;
+    color: white;
+    letter-spacing: 0.1rem;
+    border-radius: 3px;
+    padding: 0 35px;
+    font-size: 1.3rem;
+    cursor: pointer;
+    font-weight: 600;
+    transition: 0.2s;
+}
+
+button:hover, input[type="reset"]:hover, input[type="button"]:hover, button:focus, input[type="reset"]:focus, input[type="button"]:focus { 
+    background-color: #018daf;
+    transition: 0.2s;
+}
+
 
 /* -----------[ 4. Grid ]---------- */
 .row { margin-bottom: 4px; }
@@ -89,7 +121,7 @@ a:hover {
 }
 /* -----------[ 5. Utilities ]---------- */
 
-.container { position: relative; width: 100%; max-width: 1200px; padding: 0 0.5rem; margin: 0 auto; box-sizing: border-box; }
+.container { position: relative; width: 100%; max-width: 1100px; padding: 0 0.5rem; margin: 0 auto; box-sizing: border-box; }
 
 .container-full { position: relative; width: 100%; padding: 0 0.5rem; margin: 0 auto; box-sizing: border-box; }
 
