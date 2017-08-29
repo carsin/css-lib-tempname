@@ -53,6 +53,19 @@ p.lead { font-size: 2rem; font-size: 3.3vh; font-weight: 600; }
 hr.divider { max-width: 1500px; margin: 7vh auto; border: 1px solid #242424; }
 hr.divider-small { max-width: 1500px; margin: 3vh auto; border: 1px solid #242424; }
 
+/* LINKS */
+a {
+    text-decoration: none;
+    color: #45c4f7;
+    transition: 0.2s;
+}
+
+a:hover {
+    text-decoration: underline;
+    color: #007cad;
+    transition: 0.2s;
+}
+
 /* -----------[ 4. Grid ]---------- */
 .row { margin-bottom: 4px; }
 .col, .cols { float: left; box-sizing: border-box; width: 100%; }
