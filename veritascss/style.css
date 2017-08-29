@@ -55,24 +55,24 @@ hr.divider-small { max-width: 1500px; margin: 3vh auto; border: 1px solid #24242
 
 /* -----------[ 4. Grid ]---------- */
 .row { margin-bottom: 4px; }
-.column, .columns { float: left; box-sizing: border-box; width: 100%; }
+.col, .cols { float: left; box-sizing: border-box; width: 100%; }
 
 @media (min-width: 550px) {
-    .column, .columns { margin-left: 4%; padding: 0.5vh 0; }
-    .column:first-child, .columns:first-child { margin: 0; }
+    .col, .cols { margin-left: 4%; padding: 0.5vh 0; }
+    .col:first-child, .cols:first-child { margin: 0; }
 
-    .col-1 { width: 4.66666666667%; }
-    .col-2 { width: 13.3333333333%; }
-    .col-3 { width: 22%; }
-    .col-4 { width: 30.6666666667%; }
-    .col-5 { width: 39.3333333333%; }
-    .col-6 { width: 48%; }
-    .col-7 { width: 56.6666666667%; }
-    .col-8 { width: 65.3333333333%; }
-    .col-9 { width: 74.0%; }
-    .col-10 { width: 82.6666666667%; }
-    .col-11 { width: 91.3333333333%; }
-    .col-12 { width: 100%; margin-left: 0; }
+    .col.width-1 { width: 4.66666666667%; }
+    .col.width-2 { width: 13.3333333333%; }
+    .col.width-3 { width: 22%; }
+    .col.width-4 { width: 30.6666666667%; }
+    .col.width-5 { width: 39.3333333333%; }
+    .col.width-6 { width: 48%; }
+    .col.width-7 { width: 56.6666666667%; }
+    .col.width-8 { width: 65.3333333333%; }
+    .col.width-9 { width: 74.0%; }
+    .col.width-10 { width: 82.6666666667%; }
+    .col.width-11 { width: 91.3333333333%; }
+    .col.width-12 { width: 100%; margin-left: 0; }
 }
 /* -----------[ 5. Utilities ]---------- */
 

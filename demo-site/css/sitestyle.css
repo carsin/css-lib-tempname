@@ -31,7 +31,7 @@
     letter-spacing: 0.1vw;
 }
 
-#grid-column-list .column {
+#grid-column-list .col {
     background-color: #212121;
     /* border: 1px solid #111111; */
     border-radius: 5px;
