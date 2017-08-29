@@ -63,7 +63,7 @@ hr.divider-small { max-width: 1500px; margin: 3vh auto; border: 1px solid #24242
 
 @media (min-width: 550px) {
     .column, .columns { margin-left: 4%; padding: 0.5vh 0; }
-    .column:first-child, .columns:first-child { margin-left: 0; }
+    .column:first-child, .columns:first-child { margin: 0; }
 
     .col-1 { width: 4.66666666667%; }
     .col-2 { width: 13.3333333333%; }
@@ -81,6 +81,7 @@ hr.divider-small { max-width: 1500px; margin: 3vh auto; border: 1px solid #24242
 /* -----------[ 5. Utilities ]---------- */
 
 .container { position: relative; width: 100%; max-width: 1200px; padding: 0 0.5rem; margin: 0 auto; box-sizing: border-box; }
+
 .text-center { text-align: center; }
 .text-right { text-align: right; }
 .text-left { text-align: left; }
