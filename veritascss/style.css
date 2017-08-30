@@ -62,10 +62,10 @@ hr.divider-small { max-width: 1500px; margin: 3vh auto; border: 1px solid #24242
 
 /* LINKS */
 a { text-decoration: none; color: #45c4f7; transition: 0.2s; }
-a:hover { text-decoration: underline; color: #007cad; transition: 0.2s; }
+a:hover, a:focus { text-decoration: underline; color: #007cad; transition: 0.2s; }
 
 /* BUTTONS */
-button, input[type="reset"], input[type="button"] {
+button, .button, input[type="reset"], input[type="button"] {
     font-family: "Raleway", sans-serif;
     display: inline-block;
     text-decoration: none;
@@ -83,8 +83,8 @@ button, input[type="reset"], input[type="button"] {
     transition: 0.2s;
 }
 
-button:hover, input[type="reset"]:hover, input[type="button"]:hover,
-button:focus, input[type="reset"]:focus, input[type="button"]:focus { background-color: #018daf; transition: 0.2s; }
+button:hover, .button:hover, input[type="reset"]:hover, input[type="button"]:hover,
+button:focus, .button:focus, input[type="reset"]:focus, input[type="button"]:focus { background-color: #018daf; transition: 0.2s; }
 
 
 /* -----------[ 4. Grid ]---------- */
