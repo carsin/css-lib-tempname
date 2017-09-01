@@ -7,7 +7,7 @@
     <title>Veritas CSS Demo</title>
     <link rel="stylesheet" href="https://opensource.keycdn.com/fontawesome/4.7.0/font-awesome.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/7.0.0/normalize.min.css">
-    <link rel="stylesheet" href="../veritascss/style.css">
+    <link rel="stylesheet" href="../src/main.css">
     <link rel="stylesheet" href="css/sitestyle.css">
 
 </head>
@@ -17,43 +17,52 @@
             <h1 id="code-logo"><i class="fa fa-code" aria-hidden="true"></i></h1>
             <h1>Veritas CSS</h1>
             <h3>A simple css template that doesn't get in the way of you making websites.</h3>
-            <button>Download</button>
+            <a class="button" href="#"><span class="underline-anim">lol</span></a>
         </div>
     </section>
 
     <hr class="divider">
 
-    <section id="typography" class="container text-center">
-        <h2>Typography</h2>
-        <p>Veritas CSS uses <a href="https://fonts.google.com/specimen/Raleway">Raleway</a> as its default typeface. All headers, paragraphs, <a href="#">links</a>, hell even <u>underline</u>, <strong>strong </strong>and even <em>emphasized</em> text have meticulously styled down to the finest detail, including line-height, letter spacing, and font weight.</p>
-        <div id="text-list">
-            <h1>Header 1</h1>
-            <h2>Header 2</h2>
-            <h3>Header 3</h3>
-            <h4>Header 4</h4>
-            <h5>Header 5</h5>
-            <h6>Header 6</h6>
-            <hr class="divider-small">
-            <p class="lead">Lead paragraph</p>
-            <p>Paragraph</p>
+    <section id="typography" class="container">
+        <div class="row">
+            <div class="col width-6 text-responsive">
+                <h2>Typography</h2>
+                <p>Veritas CSS uses <a href="https://fonts.google.com/specimen/Raleway">Raleway</a> as its default typeface. All headers, paragraphs, <a href="#">links</a>, hell even <u>underline</u>, <strong>strong </strong>and even <em>emphasized</em> text have meticulously styled down to the finest detail, including line-height, letter spacing, and font weight.</p>
+            </div>
+            <div class="col width-6 text-center">
+                <div id="text-list">
+                    <h1>Header 1</h1>
+                    <h2>Header 2</h2>
+                    <h3>Header 3</h3>
+                    <h4>Header 4</h4>
+                    <h5>Header 5</h5>
+                    <h6>Header 6</h6>
+                    <hr class="divider-sm">
+                    <p class="lead">Lead paragraph</p>
+                    <p>Paragraph</p>
+                </div>
+            </div>
         </div>
-        <hr class="divider">
+        <hr class="divider-lg">
         <div id="article">
-            <div id="article-header" class="text-left">
+            <div id="article-header" class="text-responsive">
                 <h2><strong>LOREM IPSUM</strong></h2>
-                <h4>by <em>Lorem Advicate</em></h4>
+                <h4>by <em><a href="">Lorem Advicate</a></em></h4>
                 <p><em>Why lorem ipsum is the best.</em></p>
             </div>
-            <div id="article-content" class="text-left">
+            <div id="article-content" class="text-responsive">
                 <p>Sit minus incidunt architecto praesentium nulla, fugiat! Error qui quas numquam sapiente quidem repellendus. Voluptatum adipisci repellat magni totam culpa nam inventore fuga quisquam debitis dolorum sunt. Iste ratione accusantium sequi quo ex! Aperiam quibusdam a aperiam commodi officia! Eum facere dolorum aspernatur voluptas earum ratione vitae. Eum doloremque quae?</p>
                 <br>
                 <p>Lorem unde quibusdam sapiente laudantium explicabo autem totam modi numquam, dicta porro beatae. Quibusdam perspiciatis quisquam fuga quam delectus error?</p>
             </div>
         </div>
    </section>
+
+   <hr class="divider">
+   
    <section id="grid" class="container text-center">
         <h2>Grid</h2>
-        <p class="lead">Veritas uses <a href="getskeleton.com">Skeleton's</a> grid sizing.</p>
+        <p>Veritas uses <a href="getskeleton.com">Skeleton's</a> grid sizing.</p>
         <div id="grid-column-list">
             <div class="row">
                 <div class="col width-1"><p>col-1</p></div>

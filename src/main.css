@@ -57,8 +57,9 @@ em {
 /* -----------[ 3. Elements ]---------- */
 
 /* HR DIVIDERS */
-hr.divider { max-width: 1500px; margin: 7vh auto; border: 1px solid #242424; }
-hr.divider-small { max-width: 1500px; margin: 3vh auto; border: 1px solid #242424; }
+hr.divider { max-width: 1600px; width: 90%; margin: 7vh auto; border: 1px solid #242424; }
+hr.divider-sm { width: 80%; margin: 3vh auto; border: 1px solid #242424; }
+hr.divider-lg { width: 100%; margin: 5vh auto; border: 1px solid #242424; }
 
 /* LINKS */
 a { text-decoration: none; color: #45c4f7; transition: 0.2s; }
@@ -81,7 +82,9 @@ button, .button, input[type="reset"], input[type="button"] {
     cursor: pointer;
     font-weight: 600;
     transition: 0.2s;
+    margin: 10px;
 }
+a.button:hover { text-decoration: none; }
 
 button:hover, .button:hover, input[type="reset"]:hover, input[type="button"]:hover,
 button:focus, .button:focus, input[type="reset"]:focus, input[type="button"]:focus { background-color: #018daf; transition: 0.2s; }
@@ -93,7 +96,7 @@ a.button:hover { color: black; transition: 0.2s; }
 .row { margin-bottom: 4px; }
 .col, .cols { float: left; box-sizing: border-box; width: 100%; }
 
-@media (min-width: 550px) {
+@media (min-width: 800px) {
     .col, .cols { margin-left: 4%; padding: 0.5vh 0; }
     .col:first-child, .cols:first-child { margin: 0; }
 
@@ -118,6 +121,8 @@ a.button:hover { color: black; transition: 0.2s; }
 .text-center { text-align: center; }
 .text-right { text-align: right; }
 .text-left { text-align: left; }
+.text-responsive { text-align: left; }
+@media (max-width: 799px) { .text-responsive { text-align: center; } }
 
 @media (max-width: 960px) {
     .container { padding: 0; }
@@ -128,18 +133,18 @@ a.button:hover { color: black; transition: 0.2s; }
 /* TODO: Animation file */
 /* Link underline on hover */
 
-a.underline-anim {
+.underline-anim {
     text-decoration: none;
     position: relative;
     color: #f9f9f9;
 }
 
-a.underline-anim:hover {
+.button:hover .underline-anim, .underline-anim:hover {
     color: #ffffff;
     text-decoration: none;
 }
 
-a.underline-anim:after {
+.button:after .underline-anim, .underline-anim:after {
     content: "";
     position: absolute;
     bottom: 0;
@@ -149,6 +154,6 @@ a.underline-anim:after {
     transition: 0.2s;
 }
 
-a.underline-anim:hover:after {
+.button:hover:after .underline-anim, .underline-anim:hover:after {
     width: 100%;
 }
