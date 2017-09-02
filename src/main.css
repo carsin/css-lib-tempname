@@ -109,6 +109,7 @@ section { padding: 1rem 0; }
     -webkit-box-sizing: border-box;
     box-sizing: border-box;
     min-height: 1px;
+    border: 2px solid transparent; /* This is margin. border-color must be overwritten with columns own if custom color is present */
 }
 
 @media (min-width: 800px) {

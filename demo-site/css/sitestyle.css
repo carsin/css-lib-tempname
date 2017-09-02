@@ -32,12 +32,13 @@
 }
 
 #grid-column-list .col {
+    border-color: #292929;
     background-color: #212121;
-    border-left: 1px solid #111;
-    border-bottom: 1px solid #111;
-    border-top: 1px solid #111;
+    /* border-left: 1px solid #111; */
+    /* border-bottom: 1px solid #111; */
+    /* border-top: 1px solid #111; */
 }
 
 #grid-column-list .col:last-child {
-    border-right: 1px solid #111;
+    /* border-right: 1px solid #111; */
 }
