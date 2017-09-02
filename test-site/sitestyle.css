@@ -1,0 +1,45 @@
+.container {
+    /* Border for testing purposes */
+    /* border-left: 1px solid #212121; */
+    /* border-right: 1px solid #212121; */
+}
+
+#intro {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 80%;
+    margin: auto;
+}
+
+#intro #code-logo {
+    font-size: 20rem;
+}
+
+#typography #text-list {
+    /* border: 1px solid #191919; */
+    display: inline-block;
+    padding: 1vh 2vw;
+}
+
+#article-header p {
+    margin-bottom: 5vh;
+}
+
+#article-header h2, #article-header h4, #article-header p {
+    text-transform: uppercase;
+    letter-spacing: 0.1vw;
+}
+
+#grid-column-list .col {
+    border-color: #292929;
+    background-color: #212121;
+    /* border-left: 1px solid #111; */
+    /* border-bottom: 1px solid #111; */
+    /* border-top: 1px solid #111; */
+}
+
+#grid-column-list .col:last-child {
+    /* border-right: 1px solid #111; */
+}
+
