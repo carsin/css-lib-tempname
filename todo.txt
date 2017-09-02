@@ -1,15 +1,17 @@
 TODO LIST
 PRIORITY BY NUMBER
+1. Componentize addons
+    a. Animations
+    b. Navbar
 2. Move demo site to GH-Pages branch
 
 COMPLETE:
 8/26/17 Basic sizing and html structuring
-
+8/31/17 Basic elements styling
+            a. Links
+            b. Buttons
 WIP: 
 1. Grid optimizations
 2. Typography
 2. Responsiveness
 4. Basic elements styling
-    a. Links
-    b. Buttons
-
