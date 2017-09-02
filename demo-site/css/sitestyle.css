@@ -17,7 +17,7 @@
 }
 
 #typography #text-list {
-    border: 1px solid #191919;
+    /* border: 1px solid #191919; */
     display: inline-block;
     padding: 1vh 2vw;
 }
@@ -33,6 +33,11 @@
 
 #grid-column-list .col {
     background-color: #212121;
-    /* border: 1px solid #111111; */
-    border-radius: 5px;
+    border-left: 1px solid #111;
+    border-bottom: 1px solid #111;
+    border-top: 1px solid #111;
+}
+
+#grid-column-list .col:last-child {
+    border-right: 1px solid #111;
 }
