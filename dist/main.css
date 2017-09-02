@@ -51,9 +51,7 @@ p.lead { font-size: 2rem; font-size: 3.3vh; font-weight: 600; }
 strong, .bold { font-weight: 900; }
 
 /* EMPHASIS */
-em {
-    font-weight: 200;   
-}
+em { font-weight: 200; }
 /* -----------[ 3. Elements ]---------- */
 
 /* HR DIVIDERS */
@@ -98,9 +96,7 @@ section { padding: 1rem 0; }
 /* .row { margin-bottom: 4px; } */
 /* .col, .cols { float: left; box-sizing: border-box; width: 100%; } */
 
-.row {
-    margin: 0 auto 8px auto;
-}
+.row { margin: 0 auto 8px auto; }
 
 .row .col {
     width: 100%;
@@ -113,29 +109,7 @@ section { padding: 1rem 0; }
 }
 
 @media (min-width: 800px) {
-/*     .col, .cols { margin-left: 4%; padding: 0.5vh 0; } */
-    /* .col:first-child, .cols:first-child { margin: 0; } */
-    /*  */
-    /* .col.width-1 { width: 4.66666666667%; } */
-    /* .col.width-2 { width: 13.3333333333%; } */
-    /* .col.width-3 { width: 22%; } */
-    /* .col.width-4 { width: 30.6666666667%; } */
-    /* .col.width-5 { width: 39.3333333333%; } */
-    /* .col.width-6 { width: 48%; } */
-    /* .col.width-7 { width: 56.6666666667%; } */
-    /* .col.width-8 { width: 65.3333333333%; } */
-    /* .col.width-9 { width: 74.0%; } */
-    /* .col.width-10 { width: 82.6666666667%; } */
-    /* .col.width-11 { width: 91.3333333333%; } */
-    /* .col.width-12 { width: 100%; margin-left: 0; } */
-/* } */
-
-    .row .col.w1 {
-        margin-left: auto;
-        left: auto;
-        right: auto;
-        width: 8.3333333333%;
-    }
+    .row .col.w1 { margin-left: auto; left: auto; right: auto; width: 8.3333333333%; }
 
     .row .col.w2 {
         margin-left: auto;
