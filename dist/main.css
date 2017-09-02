@@ -225,22 +225,10 @@ section { padding: 1rem 0; }
     width: 90%;
 }
 
-@media (min-width: 601px) {
-    .container {
-        width: 85%;
-    }
-}
+@media (min-width: 601px) { .container { width: 85%; } }
+@media (min-width: 993px) { .container { width: 70%; } }
 
-@media (min-width: 993px) {
-    .container {
-        width: 70%;
-    }
-}
-
-.container .row {
-    margin-left: -0.75rem;
-    margin-right: -0.75rem;
-}
+.container .row { margin-left: -0.75rem; margin-right: -0.75rem; }
 
 .text-center { text-align: center; }
 .text-right { text-align: right; }
@@ -249,31 +237,3 @@ section { padding: 1rem 0; }
 @media (max-width: 799px) { .text-responsive { text-align: center; } }
 
 .container:after, .row:after, .u-cf { content: ""; clear: both; display: table; }
-
-/* TODO: Animation file */
-/* Link underline on hover */
-
-.underline-anim {
-    text-decoration: none;
-    position: relative;
-    color: #f9f9f9;
-}
-
-.button:hover .underline-anim, .underline-anim:hover {
-    color: #ffffff;
-    text-decoration: none;
-}
-
-.button:after .underline-anim, .underline-anim:after {
-    content: "";
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    width: 0%; 
-    border-bottom: 2px solid #9f9f9f;
-    transition: 0.2s;
-}
-
-.button:hover:after .underline-anim, .underline-anim:hover:after {
-    width: 100%;
-}
