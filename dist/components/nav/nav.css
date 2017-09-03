@@ -2,20 +2,20 @@
 
 body, html { font-family: "Raleway"; margin: 0; padding: 0; }
 
-nav.nav {
+.nav {
     margin: 0;
     width: 100%;
     background-color: black;
-    display: inline-block;
 }
 
 .nav-items, .dropdown {
-    width: 100%;
     list-style-type: none;
     list-style: none;
     margin: 0;
     padding: 0;
 }
+
+.dropdown { width: 100%; position: absolute; }
 
 .nav-items .nav-item { height: 100%; display: inline-block; }
 .nav-item .nav-link {
@@ -65,10 +65,9 @@ nav.nav {
     width: auto; min-width: 100px; padding: 0 20px; }
 
 /*Display the dropdown on hover*/
-.nav-items .nav-item .dropdown-toggle:focus + .dropdown, .dropdown:focus { display: block; }
+.nav-items .nav-item .dropdown-toggle:hover + .dropdown, .dropdown:hover { display: block; }
 
 .nav-toggle {
-    height: 100%;
     font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
     text-decoration: none;
     color: #fff;
@@ -76,7 +75,6 @@ nav.nav {
     text-align: center;
     width: 35px;
     display: none;
-    flex-direction: column;
 }
 .nav-toggle:hover { cursor: pointer; }
 
@@ -102,7 +100,8 @@ nav.nav {
     }
     /*Display 'nav toggler' link*/
     .nav-toggle {
-        display: flex;
+        display: table-cell;
+        height: 100%;
     }
 }
 
