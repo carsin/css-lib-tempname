@@ -1,38 +1,33 @@
-body, html {
-    margin: 0;
-    padding: 0;
-}
+@import url('https://fonts.googleapis.com/css?family=Raleway:400');
 
-/*Strip the ul of padding and list styling*/
-.nav {
+body, html { font-family: "Raleway"; margin: 0; padding: 0; }
+
+nav.nav {
+    margin: 0;
     width: 100%;
-    background-color: gray;
-    border-bottom: 1px solid black;
-}
-.nav, .dropdown {
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
-    position: absolute;
+    background-color: black;
+    display: inline-block;
 }
 
-/*Create a horizontal list with spacing*/
-.nav .nav-item {
-    display: inline-block;
-    float: left;
+.nav-items, .dropdown {
+    width: 100%;
+    list-style-type: none;
+    list-style: none;
+    margin: 0;
+    padding: 0;
 }
-/*Style for menu links*/
+
+.nav-items .nav-item { height: 100%; display: inline-block; }
 .nav-item .nav-link {
-    display: block;
-    min-width: 140px;
-    height: 50px;
+    display: inline-block;
     text-align: center;
-    line-height: 50px;
-    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    padding: 10px 0;
     color: #fff;
-    background: #2f3036;
     text-decoration: none;
 }
+
+.nav-item.active { background: white; }
+.nav-item.active .nav-link { color: black; }
 
 /*Hover state for top level links*/
 .nav-item:hover .nav-link {
@@ -67,40 +62,33 @@ body, html {
 
 /*Prevent text wrapping*/
 .nav-item .dropdown .dropdown-item .nav-link {
-    width: auto;
-    min-width: 100px;
-    padding: 0 20px;
-}
+    width: auto; min-width: 100px; padding: 0 20px; }
+
 /*Display the dropdown on hover*/
+.nav-items .nav-item .dropdown-toggle:focus + .dropdown, .dropdown:focus { display: block; }
 
-.nav .nav-item .dropdown-toggle:focus + .dropdown, .dropdown:focus {
-    display: block;
-}
-
-/*Style 'show menu' label button and hide it by default*/
-
-.show-menu {
+.nav-toggle {
+    height: 100%;
     font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
     text-decoration: none;
     color: #fff;
-    background: #19c589;
+    background: gray;
     text-align: center;
-    padding: 10px 0;
+    width: 35px;
     display: none;
+    flex-direction: column;
 }
+.nav-toggle:hover { cursor: pointer; }
 
 /*Hide checkbox*/
-#show-menu[type=checkbox] {
-    display: none;
-}
-/*Show menu when invisible checkbox is checked*/
-#show-menu[type=checkbox]:checked ~ #top-nav {
-    display: block;
-}
-/*Responsive Styles*/
+#nav-toggler[type=checkbox] { display: none; }
+
+/* Show menu when invisible checkbox is checked*/
+#nav-toggler[type=checkbox]:checked ~ .nav-items { display: block; }
+
 @media screen and (max-width : 760px) {
     /*Make dropdown links appear inline*/
-    .nav, .dropdown {
+    .nav-items, .dropdown {
         position: static;
         display: none;
     }
@@ -109,12 +97,20 @@ body, html {
         margin-bottom: 1px;
     }
     /*Make all menu links full width*/
-    .nav .nav-item, .nav-item .nav-link {
+    .nav-items .nav-item, .nav-item .nav-link {
         width: 100%;
     }
-    /*Display 'show menu' link*/
-    .show-menu {
-        display: block;
+    /*Display 'nav toggler' link*/
+    .nav-toggle {
+        display: flex;
     }
 }
 
+/* Optional good looking toggle button */
+.nav-toggle-icon {
+    width: 25px;
+    height: 2px;
+    background-color: white;
+    margin: 5px;
+    padding: 0;
+}

@@ -7,27 +7,26 @@
     <link rel="stylesheet" href="nav.css">
 </head>
 <body>
-    <label for="show-menu" class="show-menu">Show Menu</label>
-    <input type="checkbox" id="show-menu" role="button">
-    <ul class="nav" id="top-nav">
-        <li class="nav-item"><a href="#" class="nav-link">Home</a></li>
-        <li class="nav-item">
-            <a href="#" class="nav-link dropdown-toggle">About V</a>
-            <ul class="hidden dropdown">
-                <li class="dropdown-item"><a href="#" class="nav-link">Who We Are</a></li>
-                <li class="dropdown-item"><a href="#" class="nav-link">What We Do</a></li>
-            </ul>
-        </li>
-        <li class="nav-item">
-            <a href="#" class="nav-link dropdown-toggle">Portfolio V</a>
-            <ul class="hidden dropdown">
-                <li class="dropdown-item"><a href="#" class="nav-link">Photography</a></li>
-                <li class="dropdown-item"><a href="#" class="nav-link">Web & User Interface Design</a></li>
-                <li class="dropdown-item"><a href="#" class="nav-link">Illustration</a></li>
-            </ul>
-        </li>
-        <li class="nav-item"><a href="#" class="nav-link">News</a></li>
-        <li class="nav-item"><a href="#" class="nav-link">Contact</a></li>
-    </ul>
+    <nav class="nav">
+        <label for="nav-toggler" class="nav-toggle">
+            <div class="nav-toggle-icon"></div>
+            <div class="nav-toggle-icon"></div>
+        </label>
+        <input type="checkbox" id="nav-toggler" role="button">
+        <ul class="nav-items">
+            <li class="nav-item active"><a href="#" class="nav-link">HOME</a></li>
+            <li class="nav-item"><a href="#" class="nav-link">ABOUT</a></li>
+            <li class="nav-item"><a href="#" class="nav-link">CONTACT</a></li>
+            <li class="nav-item"><a href="#" class="nav-link">BLOG</a></li>
+            <li class="nav-item">
+                <a href="#" class="nav-link dropdown-toggle">LINKS</a>
+                <ul class="hidden dropdown">
+                    <li class="dropdown-item"><a href="#" class="nav-link">GitHub</a></li>
+                    <li class="dropdown-item"><a href="#" class="nav-link">Twitter</a></li>
+                    <li class="dropdown-item"><a href="#" class="nav-link">Resume</a></li>
+                </ul>
+            </li>
+        </ul>
+    </nav>
 </body>
 </html>
