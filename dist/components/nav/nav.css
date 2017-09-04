@@ -6,6 +6,7 @@ body, html { font-family: "Raleway"; margin: 0; padding: 0; }
     margin: 0;
     width: 100%;
     background-color: black;
+    height: 40px;
 }
 
 .nav-items, .dropdown {
@@ -73,7 +74,7 @@ body, html { font-family: "Raleway"; margin: 0; padding: 0; }
     color: #fff;
     background: gray;
     text-align: center;
-    width: 35px;
+    width: 10%;
     display: none;
 }
 .nav-toggle:hover { cursor: pointer; }
@@ -100,7 +101,7 @@ body, html { font-family: "Raleway"; margin: 0; padding: 0; }
     }
     /*Display 'nav toggler' link*/
     .nav-toggle {
-        display: table-cell;
+        display: inline-block;
         height: 100%;
     }
 }
