@@ -6,7 +6,6 @@ body, html { font-family: "Raleway"; margin: 0; padding: 0; }
     display: inline-block;
     margin: 0;
     width: 100%;
-    background-color: black;
     height: 40px;
 }
 
@@ -19,13 +18,12 @@ body, html { font-family: "Raleway"; margin: 0; padding: 0; }
     padding: 0;
 }
 
-.dropdown { width: 100%; position: absolute; }
+.dropdown { position: absolute; }
 
 .nav-items .nav-item { height: 100%; display: inline-block; }
 .nav-item .nav-link {
     font-size: 15px;
     line-height: 40px;
-    background-color: black;
     display: inline-block;
     text-align: center;
     padding: 0 20px;
