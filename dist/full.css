@@ -10,7 +10,7 @@
 
 /* -----------[ 1. Global & Base Styles ]---------- */
 
-@import url('https://fonts.googleapis.com/css?family=Raleway:400'); /* Raleway inspired by Skeleton*/
+@import url('https://fonts.googleapis.com/css?family=Raleway:400'); /* Raleway inspired by Skeleton */
 
 html, body {
     height: 100%;
@@ -214,8 +214,6 @@ section { padding: 1rem 0; }
 .container:after, .row:after, .u-cf { content: ""; clear: both; display: table; }
 
 /* -----------[ 6. Nav Component ]---------- */
-body, html { font-family: "Raleway"; margin: 0; padding: 0; }
-
 .nav {
     display: inline-block;
     margin: 0;
