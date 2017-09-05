@@ -1,0 +1,330 @@
+/* TODO: License and name
+ * ----------[ Table of Contents ]----------
+ *  > 1. Global & Base Styles
+ *  > 2. Typography
+ *  > 3. Elements
+ *  > 4. Grid
+ *  > 5. Utilities
+ *  > 6. Nav Component
+ * ----------------------------------------- */
+
+/* -----------[ 1. Global & Base Styles ]---------- */
+
+@import url('https://fonts.googleapis.com/css?family=Raleway:400'); /* Raleway inspired by Skeleton*/
+
+html, body {
+    height: 100%;
+    width: 100%;
+    padding: 0;
+    margin: 0;
+    font-size: 1.5em;
+    font-family: "Raleway", sans-serif;
+    line-height: 1.5;
+    background-color: #292929;
+    color: #e8e8e8;
+}
+
+/* 1 rem = 10px */
+html { font-size: 62.5%; }
+
+/* -----------[ 2. Typography ]---------- */
+
+h1, h2, h3, h4, h5, h6 {
+    margin: 0 0 0.5rem 0;
+    padding: 0;
+    font-weight: normal;
+}
+
+/*   Fallback size      Responsive size   line height        letter spacing*/
+h1 { font-size: 4rem;   font-size: 7vh;   line-height: 1.2;  letter-spacing: .2rem;   }
+h2 { font-size: 3.6rem; font-size: 5.3vh; line-height: 1.25; letter-spacing: .1rem;   }
+h3 { font-size: 3.2rem; font-size: 4.6vh; line-height: 1.3;  letter-spacing: -.1rem;  }
+h4 { font-size: 2.8rem; font-size: 3.9vh; line-height: 1.35; letter-spacing: -.05rem; }
+h5 { font-size: 2.4rem; font-size: 3.3vh; line-height: 1.4;  letter-spacing: 0;       }
+h6 { font-size: 2.1rem; font-size: 3vh;   line-height: 1.45; letter-spacing: 0;       }
+
+/* PARAGRAPHS */
+
+p { font-size: 1.7rem; /* Fallback */ font-size: 2.7vh; margin: 0; }
+p.lead { font-size: 2rem; font-size: 3.3vh; font-weight: 600; }
+
+/* STRONG */
+strong, .bold { font-weight: 900; }
+
+/* EMPHASIS */
+em { font-weight: 200; }
+/* -----------[ 3. Elements ]---------- */
+
+/* HR DIVIDERS */
+hr.divider { max-width: 1600px; width: 90%; margin: 7vh auto; border: 1px solid #242424; }
+hr.divider-sm { width: 80%; margin: 3vh auto; border: 1px solid #242424; }
+hr.divider-lg { width: 100%; margin: 5vh auto; border: 1px solid #242424; }
+
+/* LINKS */
+a { text-decoration: none; color: #45c4f7; transition: 0.2s; }
+a:hover, a:focus { text-decoration: underline; color: #007cad; transition: 0.2s; }
+
+/* BUTTONS */
+button, .button, input[type="reset"], input[type="button"] {
+    font-family: "Raleway", sans-serif;
+    display: inline-block;
+    text-decoration: none;
+    height: 40px;
+    text-transform: uppercase;
+    background-color: #3dc3e5;
+    border: none;
+    color: white;
+    letter-spacing: 0.1rem;
+    border-radius: 3px;
+    padding: 0 35px;
+    font-size: 1.3rem;
+    cursor: pointer;
+    font-weight: 600;
+    transition: 0.2s;
+    margin: 10px;
+}
+
+a.button:hover { text-decoration: none; }
+
+button:hover, .button:hover, input[type="reset"]:hover, input[type="button"]:hover,
+button:focus, .button:focus, input[type="reset"]:focus, input[type="button"]:focus { background-color: #018daf; transition: 0.2s; }
+
+a.button { line-height: 40px; }
+a.button:hover { color: black; transition: 0.2s; }
+section { padding: 1rem 0; }
+
+/* -----------[ 4. Grid ]---------- */
+/* .row { margin-bottom: 4px; } */
+/* .col, .cols { float: left; box-sizing: border-box; width: 100%; } */
+
+.row { margin: 0 auto 8px auto; }
+
+.row .col {
+    width: 100%;
+    margin: 5px 0;
+    float: left;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    min-height: 1px;
+    border: 2px solid transparent; /* This is margin. border-color must be overwritten with columns own if custom color is present */
+}
+
+@media (min-width: 800px) {
+    .row .col.w1 { margin-left: auto; left: auto; right: auto; width: 8.3333333333%; }
+
+    .row .col.w2 {
+        margin-left: auto;
+        left: auto;
+        right: auto;
+        width: 16.6666666667%;
+    }
+
+    .row .col.w3 {
+        margin-left: auto;
+        left: auto;
+        right: auto;
+        width: 25%;
+    }
+
+    .row .col.w4 {
+        margin-left: auto;
+        left: auto;
+        right: auto;
+        width: 33.3333333333%;
+    }
+
+    .row .col.w5 {
+        margin-left: auto;
+        left: auto;
+        right: auto;
+        width: 41.6666666667%;
+    }
+
+    .row .col.w6 {
+        margin-left: auto;
+        left: auto;
+        right: auto;
+        width: 50%;
+    }
+
+    .row .col.w7 {
+        margin-left: auto;
+        left: auto;
+        right: auto;
+        width: 58.3333333333%;
+    }
+
+    .row .col.w8 {
+        margin-left: auto;
+        left: auto;
+        right: auto;
+        width: 66.6666666667%;
+    }
+
+    .row .col.w9 {
+        margin-left: auto;
+        left: auto;
+        right: auto;
+        width: 75%;
+    }
+
+    .row .col.w10 {
+        margin-left: auto;
+        left: auto;
+        right: auto;
+        width: 83.3333333333%;
+    }
+
+    .row .col.w11 {
+        margin-left: auto;
+        left: auto;
+        right: auto;
+        width: 91.6666666667%;
+    }
+
+    .row .col.w12 {
+        margin-left: auto;
+        left: auto;
+        right: auto;
+        width: 100%;
+    }
+}
+/* -----------[ 5. Utilities ]---------- */
+
+/* .container { position: relative; width: 75%; max-width: 1500px; padding: 0 0.5rem; margin: 0 auto; box-sizing: border-box; } */
+/* .container-full { position: relative; width: 100%; padding: 0 0.5rem; margin: 0 auto; box-sizing: border-box; } */
+
+.container {
+    margin: 0 auto;
+    max-width: 1280px;
+    width: 90%;
+}
+
+@media (min-width: 601px) { .container { width: 85%; } }
+@media (min-width: 993px) { .container { width: 70%; } }
+
+.container .row { margin-left: -0.75rem; margin-right: -0.75rem; }
+
+.text-center { text-align: center; }
+.text-right { text-align: right; }
+.text-left { text-align: left; }
+.text-responsive { text-align: left; }
+@media (max-width: 799px) { .text-responsive { text-align: center; } }
+
+.container:after, .row:after, .u-cf { content: ""; clear: both; display: table; }
+
+/* -----------[ 6. Nav Component ]---------- */
+body, html { font-family: "Raleway"; margin: 0; padding: 0; }
+
+.nav {
+    display: inline-block;
+    margin: 0;
+    width: 100%;
+    height: 40px;
+}
+
+.nav-items { font-size: 0; }
+
+.nav-items, .dropdown {
+    list-style-type: none;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.dropdown { position: absolute; }
+
+.nav-items .nav-item { height: 100%; display: inline-block; }
+.nav-item .nav-link {
+    font-size: 15px;
+    line-height: 40px;
+    display: inline-block;
+    text-align: center;
+    padding: 0 20px;
+    color: #fff;
+    text-decoration: none;
+}
+
+.nav-item.active .nav-link { background: white; }
+.nav-item.active .nav-link { color: black; }
+
+/* Hover state for top level links */
+.nav-item:hover .nav-link { background: #19c589; }
+
+/* Style for dropdown links */
+.nav-item .dropdown .nav-link {
+    background: #f3f3f3;
+    color: #2f3036;
+    height: 40px;
+    line-height: 40px;
+}
+
+/* Hover state for dropdown links */
+.nav-item:hover .dropdown .nav-link:hover { background: #19c589; color: #fff; }
+
+/* Hide dropdown links until they are needed */
+.nav-item .dropdown { display: none; }
+
+/* Make dropdown links vertical */
+.nav-item .dropdown .dropdown-item {
+    display: block;
+    float: none;
+    margin: 0;
+}
+
+/* Prevent text wrapping */
+.nav-item .dropdown .dropdown-item .nav-link { width: auto; min-width: 100px;}
+
+/* Display the dropdown on hover */
+.nav-items .nav-item .dropdown-toggle:hover + .dropdown, .dropdown:hover { display: block; }
+
+.nav-toggle {
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    text-decoration: none;
+    color: #fff;
+    text-align: center;
+    width: 40px;
+    display: none;
+}
+.nav-toggle:hover { cursor: pointer; }
+
+/* Hide checkbox */
+#nav-toggler[type=checkbox] { display: none; }
+
+/* Show menu when invisible checkbox is checked*/
+#nav-toggler[type=checkbox]:checked ~ .nav-items { 
+    margin: 0;
+    display: block; 
+    background: #000;
+    transition: top 300ms cubic-bezier(0.17, 0.04, 0.03, 0.94);
+}
+
+@media screen and (max-width : 760px) {
+    /* Make dropdown links appear inline */
+    .nav-items, .dropdown {
+        position: static;
+        display: none;
+    }
+
+    .nav-items { position: absolute; top: 40px; width: 100%; }
+    
+    /* Make all menu links full width */
+    .nav-items .nav-item, .nav-item .nav-link, .nav-items .dropdown .dropdown-item .nav-link {
+        width: 100%;
+        text-align: center;
+    }
+
+    .nav-item .nav-link { padding: 0; }
+
+    /* Display 'nav toggler' link */
+    .nav-toggle { display: inline-block; height: 100%; }
+}
+
+/* Optional good looking toggle button */
+.nav-toggle-icon {
+    width: 80%;
+    height: 2px;
+    background-color: white;
+    margin: 12px 10%;
+    padding: 0;
+}
