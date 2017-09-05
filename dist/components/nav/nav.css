@@ -1,7 +1,3 @@
-@import url('https://fonts.googleapis.com/css?family=Raleway:400');
-
-body, html { font-family: "Raleway"; margin: 0; padding: 0; }
-
 .nav {
     display: inline-block;
     margin: 0;
@@ -34,12 +30,10 @@ body, html { font-family: "Raleway"; margin: 0; padding: 0; }
 .nav-item.active .nav-link { background: white; }
 .nav-item.active .nav-link { color: black; }
 
-/*Hover state for top level links*/
-.nav-item:hover .nav-link {
-    background: #19c589;
-}
+/* Hover state for top level links */
+.nav-item:hover .nav-link { background: #19c589; }
 
-/*Style for dropdown links*/
+/* Style for dropdown links */
 .nav-item .dropdown .nav-link {
     background: #f3f3f3;
     color: #2f3036;
@@ -47,28 +41,23 @@ body, html { font-family: "Raleway"; margin: 0; padding: 0; }
     line-height: 40px;
 }
 
-/*Hover state for dropdown links*/
-.nav-item:hover .dropdown .nav-link:hover {
-    background: #19c589;
-    color: #fff;
-}
+/* Hover state for dropdown links */
+.nav-item:hover .dropdown .nav-link:hover { background: #19c589; color: #fff; }
 
-/*Hide dropdown links until they are needed*/
-.nav-item .dropdown {
-    display: none;
-}
+/* Hide dropdown links until they are needed */
+.nav-item .dropdown { display: none; }
 
-/*Make dropdown links vertical*/
+/* Make dropdown links vertical */
 .nav-item .dropdown .dropdown-item {
     display: block;
     float: none;
     margin: 0;
 }
 
-/*Prevent text wrapping*/
+/* Prevent text wrapping */
 .nav-item .dropdown .dropdown-item .nav-link { width: auto; min-width: 100px;}
 
-/*Display the dropdown on hover*/
+/* Display the dropdown on hover */
 .nav-items .nav-item .dropdown-toggle:hover + .dropdown, .dropdown:hover { display: block; }
 
 .nav-toggle {
@@ -81,7 +70,7 @@ body, html { font-family: "Raleway"; margin: 0; padding: 0; }
 }
 .nav-toggle:hover { cursor: pointer; }
 
-/*Hide checkbox*/
+/* Hide checkbox */
 #nav-toggler[type=checkbox] { display: none; }
 
 /* Show menu when invisible checkbox is checked*/
@@ -93,35 +82,24 @@ body, html { font-family: "Raleway"; margin: 0; padding: 0; }
 }
 
 @media screen and (max-width : 760px) {
-    /*Make dropdown links appear inline*/
+    /* Make dropdown links appear inline */
     .nav-items, .dropdown {
         position: static;
         display: none;
     }
 
     .nav-items { position: absolute; top: 40px; width: 100%; }
-
-    /*Create vertical spacing*/
-    .nav-item {
-        margin-bottom: 1px;
-    }
-
-    /*Make all menu links full width*/
+    
+    /* Make all menu links full width */
     .nav-items .nav-item, .nav-item .nav-link, .nav-items .dropdown .dropdown-item .nav-link {
         width: 100%;
         text-align: center;
     }
 
-    .nav-item .nav-link {
-        padding: 0;
-    }
+    .nav-item .nav-link { padding: 0; }
 
-
-    /*Display 'nav toggler' link*/
-    .nav-toggle {
-        display: inline-block;
-        height: 100%;
-    }
+    /* Display 'nav toggler' link */
+    .nav-toggle { display: inline-block; height: 100%; }
 }
 
 /* Optional good looking toggle button */
