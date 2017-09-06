@@ -4,10 +4,7 @@
     width: 100%;
 }
 
-.nav-center .nav-items { position: absolute; left: 50%; }
-.nav-center .nav-items-div { position: relative; left: -50%; }
-
-.nav-items { font-size: 0; white-space: nowrap; }
+.nav-items { font-size: 0; }
 
 .nav-items, .dropdown {
     list-style-type: none;
@@ -16,7 +13,7 @@
     padding: 0;
 }
 
-.nav-brand { margin: 2px 0 0 2px; float: left; }
+.nav-brand { float: left; }
 
 .dropdown { position: absolute; }
 
@@ -29,24 +26,26 @@
     text-align: center;
     padding: 0 20px;
     color: #fff;
+    background: #101010;
     text-decoration: none;
 }
 
 .nav-img-link { height: 100%; width: 100%; }
 
-.nav-item.active .nav-link { background: white; color: black; }
+.nav-item.active .nav-link { background: #3dc3e5; }
 
 /* Hover state for top level links */
-.nav-item:hover .nav-link { background: #19c589; }
+.nav-item:hover .nav-link { background: #00d8ff; color: black }
 
 /* Style for dropdown links */
 .nav-item .dropdown .nav-link {
-    background: transparent;
+    background: #101010;
+    color: white;
     line-height: 40px;
 }
 
 /* Hover state for dropdown links */
-.nav-item:hover .dropdown .nav-link:hover { background: #19c589; color: #fff; }
+.nav-item:hover .dropdown .nav-link:hover { background: #00d8ff; color: black; }
 
 /* Hide dropdown links until they are needed */
 .nav-item .dropdown { display: none; }
@@ -80,10 +79,9 @@
 /* Show menu when invisible checkbox is checked*/
 #nav-toggler[type=checkbox]:checked ~ .nav-items { 
     display: block; 
-    margin: 20px 0 0 0;
 }
 
-@media screen and (max-width: 760px) {
+@media screen and (max-width: 799px) {
     .nav { background: #101010; }
     /* Make dropdown links appear inline */
     .nav-items, .dropdown { position: static; display: none; }
@@ -94,7 +92,12 @@
     .nav-items .nav-item, .nav-item .nav-link, .nav-items .dropdown .dropdown-item .nav-link {
         width: 100%;
         text-align: center;
-        background: #000;
+        background: #101010;
+    }
+
+    #nav-toggler[type=checkbox]:checked ~ .nav-items { 
+        padding: 10px 0 0 0;
+        background: #101010;
     }
 
     .nav-item .nav-link { padding: 0; }
@@ -105,7 +108,15 @@
     .nav-brand .nav-item { text-align: center; }
 }
 
-.nav-brand-logo { width: 40px; }
+@media screen and (min-width: 800px) { 
+    .nav-center .nav-items { position: absolute; left: 50%; }
+    .nav-center .nav-items-div { position: relative; left: -50%; }
+    .nav-items { white-space: nowrap; }
+}
+
+.nav-brand-text .nav-link { color: black; font-size: 20px; font-weight: bold; background-color: white; }
+.nav-brand-logo { margin: 2px 0 0 2px; }
+.nav-brand-img { width: 40px; }
 
 /* Optional good looking toggle button */
 .nav-toggle-icon {
