@@ -9,7 +9,7 @@
 
 /* -----------[ 1. Global & Base Styles ]---------- */
 
-@import url('https://fonts.googleapis.com/css?family=Raleway:400'); /* Raleway inspired by Skeleton*/
+@import url('https://fonts.googleapis.com/css?family=Raleway:400'); /* Raleway inspired by Skeleton */
 
 html, body {
     height: 100%;
@@ -19,7 +19,7 @@ html, body {
     font-size: 1.5em;
     font-family: "Raleway", sans-serif;
     line-height: 1.5;
-    background-color: #292929;
+    background-color: #101010;
     color: #e8e8e8;
 }
 
@@ -210,4 +210,5 @@ section { padding: 1rem 0; }
 .text-responsive { text-align: left; }
 @media (max-width: 799px) { .text-responsive { text-align: center; } }
 
+.fixed { position: fixed; }
 .container:after, .row:after, .u-cf { content: ""; clear: both; display: table; }
