@@ -9,25 +9,31 @@
     <link rel="stylesheet" href="nav.css">
 </head>
 <body>
-    <nav class="nav">
+   <nav class="nav fixed nav-center">
         <label for="nav-toggler" class="nav-toggle">
             <div class="nav-toggle-icon"></div>
             <div class="nav-toggle-icon"></div>
         </label>
         <input type="checkbox" id="nav-toggler" role="button">
+        <!-- Nav title as text -->
+        <!-- <p class="nav-brand"><a class="nav-link" href="">Test</a></p> -->
+        <!-- Nav title as image -->
+        <div class="nav-brand"><a class="nav-img-link" href="#"><img class="nav-brand-logo" src="logo-white.png" alt="Logo"></a></div>
         <ul class="nav-items">
-            <li class="nav-item active"><a href="#" class="nav-link">HOME</a></li>
-            <li class="nav-item"><a href="#" class="nav-link">ABOUT</a></li>
-            <li class="nav-item"><a href="#" class="nav-link">CONTACT</a></li>
-            <li class="nav-item"><a href="#" class="nav-link">BLOG</a></li>
-            <li class="nav-item">
-                <a href="#" class="nav-link dropdown-toggle">LINKS  <i class="fa fa-sort-desc" aria-hidden="true"></i></a>
-                <ul class="hidden dropdown">
-                    <li class="dropdown-item"><a href="#" class="nav-link">GitHub</a></li>
-                    <li class="dropdown-item"><a href="#" class="nav-link">Twitter</a></li>
-                    <li class="dropdown-item"><a href="#" class="nav-link">Resume</a></li>
-                </ul>
-            </li>
+            <div class="nav-items-div">
+                <li class="nav-item active"><a href="#" class="nav-link">Home</a></li>
+                <li class="nav-item"><a href="#typography" class="nav-link">Typography</a></li>
+                <li class="nav-item"><a href="#grid" class="nav-link">Grid</a></li>
+                <li class="nav-item"><a href="#" class="nav-link">Placeholder</a></li>
+                <li class="nav-item">
+                    <a href="#" class="nav-link dropdown-toggle">LINKS  <i class="fa fa-sort-desc" aria-hidden="true"></i></a>
+                    <ul class="hidden dropdown">
+                        <li class="dropdown-item"><a href="https://github.com/carsin/veritas-css" class="nav-link">GitHub Repo</a></li>
+                        <li class="dropdown-item"><a href="#" class="nav-link">Twitter</a></li>
+                        <li class="dropdown-item"><a href="#" class="nav-link">Resume</a></li>
+                    </ul>
+                </li>
+            </div>
         </ul>
     </nav>
 </body>
