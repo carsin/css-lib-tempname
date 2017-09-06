@@ -2,10 +2,12 @@
     display: inline-block;
     margin: 0;
     width: 100%;
-    height: 40px;
 }
 
-.nav-items { font-size: 0; }
+.nav-center .nav-items { position: absolute; left: 50%; }
+.nav-center .nav-items-div { position: relative; left: -50%; }
+
+.nav-items { font-size: 0; white-space: nowrap; }
 
 .nav-items, .dropdown {
     list-style-type: none;
@@ -14,9 +16,12 @@
     padding: 0;
 }
 
+.nav-brand { margin: 2px 0 0 2px; float: left; }
+
 .dropdown { position: absolute; }
 
 .nav-items .nav-item { height: 100%; display: inline-block; }
+
 .nav-item .nav-link {
     font-size: 15px;
     line-height: 40px;
@@ -27,17 +32,16 @@
     text-decoration: none;
 }
 
-.nav-item.active .nav-link { background: white; }
-.nav-item.active .nav-link { color: black; }
+.nav-img-link { height: 100%; width: 100%; }
+
+.nav-item.active .nav-link { background: white; color: black; }
 
 /* Hover state for top level links */
 .nav-item:hover .nav-link { background: #19c589; }
 
 /* Style for dropdown links */
 .nav-item .dropdown .nav-link {
-    background: #f3f3f3;
-    color: #2f3036;
-    height: 40px;
+    background: transparent;
     line-height: 40px;
 }
 
@@ -75,18 +79,14 @@
 
 /* Show menu when invisible checkbox is checked*/
 #nav-toggler[type=checkbox]:checked ~ .nav-items { 
-    margin: 0;
     display: block; 
-    background: #000;
-    transition: top 300ms cubic-bezier(0.17, 0.04, 0.03, 0.94);
+    margin: 20px 0 0 0;
 }
 
-@media screen and (max-width : 760px) {
+@media screen and (max-width: 760px) {
+    .nav { background: #101010; }
     /* Make dropdown links appear inline */
-    .nav-items, .dropdown {
-        position: static;
-        display: none;
-    }
+    .nav-items, .dropdown { position: static; display: none; }
 
     .nav-items { position: absolute; top: 40px; width: 100%; }
     
@@ -94,13 +94,18 @@
     .nav-items .nav-item, .nav-item .nav-link, .nav-items .dropdown .dropdown-item .nav-link {
         width: 100%;
         text-align: center;
+        background: #000;
     }
 
     .nav-item .nav-link { padding: 0; }
 
     /* Display 'nav toggler' link */
-    .nav-toggle { display: inline-block; height: 100%; }
+    .nav-toggle { float: left; display: inline-block; height: 100%; }
+    .nav-brand { margin: 0 auto; width: 50px; float: none; text-align: center; height: 100%; }
+    .nav-brand .nav-item { text-align: center; }
 }
+
+.nav-brand-logo { width: 40px; }
 
 /* Optional good looking toggle button */
 .nav-toggle-icon {
