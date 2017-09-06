@@ -32,8 +32,9 @@
 }
 
 #grid-column-list .col {
-    border-color: #292929;
+    border-color: #101010;
     background-color: #212121;
+    padding: 10px 0;
     /* border-left: 1px solid #111; */
     /* border-bottom: 1px solid #111; */
     /* border-top: 1px solid #111; */
