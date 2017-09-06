@@ -9,6 +9,8 @@
 
 /* -----------[ 1. Global & Base Styles ]---------- */
 
+@import url('https://fonts.googleapis.com/css?family=Raleway:400'); /* Raleway inspired by Skeleton */
+
 html, body {
     height: 100%;
     width: 100%;
