@@ -327,6 +327,7 @@ section { padding: 1rem 0; }
 @media screen and (min-width: 800px) { 
     .nav-center .nav-items { position: absolute; left: 50%; }
     .nav-center .nav-items-div { position: relative; left: -50%; }
+    .nav-right .nav-items { position: absolute; right: 0; }
     .nav-items { white-space: nowrap; }
 }
 
