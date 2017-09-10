@@ -1,7 +1,9 @@
 .nav {
+    background-color: #f7f7f7;
     display: inline-block;
     margin: 0;
     width: 100%;
+    border-bottom: 1px solid #f0f0f0;
 }
 
 .nav-items { font-size: 0; }
@@ -21,13 +23,12 @@
 
 .nav-item .nav-link {
     font-size: 15px;
-    line-height: 40px;
+    line-height: 44px;
     display: inline-block;
     text-align: center;
     padding: 0 20px;
-    color: #fff;
-    background: #101010;
     text-decoration: none;
+    color: rgba(20, 20, 20, 0.9);
 }
 
 .nav-img-link { height: 100%; width: 100%; }
@@ -39,9 +40,9 @@
 
 /* Style for dropdown links */
 .nav-item .dropdown .nav-link {
-    background: #101010;
-    color: white;
-    line-height: 40px;
+    background: #f7f7f7;
+    color: rgba(20, 20, 20, 0.9);
+    line-height: 44px;
 }
 
 /* Hover state for dropdown links */
@@ -77,34 +78,31 @@
 #nav-toggler[type=checkbox] { display: none; }
 
 /* Show menu when invisible checkbox is checked*/
-#nav-toggler[type=checkbox]:checked ~ .nav-items { 
-    display: block; 
-}
+#nav-toggler[type=checkbox]:checked ~ .nav-items { display: block; }
 
 @media screen and (max-width: 799px) {
-    .nav { background: #101010; }
     /* Make dropdown links appear inline */
     .nav-items, .dropdown { position: static; display: none; }
 
-    .nav-items { position: absolute; top: 40px; width: 100%; }
+    .nav-items { position: absolute; top: 45px; width: 100%; }
     
     /* Make all menu links full width */
     .nav-items .nav-item, .nav-item .nav-link, .nav-items .dropdown .dropdown-item .nav-link {
         width: 100%;
         text-align: center;
-        background: #101010;
+        background: #f7f7f7;
     }
 
     #nav-toggler[type=checkbox]:checked ~ .nav-items { 
         padding: 10px 0 0 0;
-        background: #101010;
+        background: #f7f7f7;
     }
 
     .nav-item .nav-link { padding: 0; }
 
     /* Display 'nav toggler' link */
     .nav-toggle { float: left; display: inline-block; height: 100%; }
-    .nav-brand { margin: 0 auto; width: 50px; float: none; text-align: center; height: 100%; }
+    .nav-brand { margin: 0 auto; float: none; text-align: center; height: 100%; }
     .nav-brand .nav-item { text-align: center; }
 }
 
@@ -114,15 +112,16 @@
     .nav-items { white-space: nowrap; }
 }
 
-.nav-brand-text .nav-link { color: black; font-size: 20px; font-weight: bold; background-color: white; }
-.nav-brand-logo { margin: 2px 0 0 2px; }
-.nav-brand-img { width: 40px; }
+.nav-brand-text.nav-item { width: 25%; }
+.nav-brand-text .nav-link { width: 100%; white-space: nowrap; color: rgba(20, 20, 20, 0.9); font-size: 20px; font-weight: bold; }
+.nav-brand-logo { width: 44px; height: 44px; }
+.nav-brand-img { max-width: 100%; max-height: 100%; }
 
 /* Optional good looking toggle button */
 .nav-toggle-icon {
     width: 80%;
     height: 2px;
-    background-color: white;
+    background-color: black;
     margin: 12px 10%;
     padding: 0;
 }
