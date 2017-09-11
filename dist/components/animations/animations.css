@@ -1,0 +1,46 @@
+/* Underline slide left on hover */
+
+.ul-slide-left {
+    display: inline;
+    text-decoration: none;
+    position: relative;
+}
+
+.ul-slide-left::after {
+    content: '';
+    display: inline-block;
+    width: 0;
+    height: 1px;
+    background: #292929;
+    position: absolute;
+    left: 0px;
+    bottom: 0px;
+    transition: 0.2s ease-in;
+}
+
+.ul-slide-left:hover::after {
+    width: 100%;
+}
+
+/* Underline slide right on hover */
+
+.ul-slide-right {
+    display: inline;
+    text-decoration: none;
+    position: relative;
+}
+
+.ul-slide-right::after {
+    content: '';
+    display: inline-block;
+    width: 0;
+    height: 1px;
+    background: #292929;
+    position: absolute;
+    right: 0px;
+    bottom: 0px;
+    transition: 0.2s ease-in;
+}
+.ul-slide-right:hover::after {
+    width: 100%;
+}
