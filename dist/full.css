@@ -6,25 +6,20 @@
  *  > 4. Grid
  *  > 5. Utilities
  *  > 6. Nav Component
- * ----------------------------------------- */
+ *  > 7. Animations Component
+* ----------------------------------------- */
 
 /* -----------[ 1. Global & Base Styles ]---------- */
-
-@import url('https://fonts.googleapis.com/css?family=Raleway|Cabin:400'); /* Raleway inspired by Skeleton */
 
 html, body {
     height: 100%;
     width: 100%;
     padding: 0;
     margin: 0;
-    font-family: "Cabin", sans-serif;
     line-height: 1.5;
     background-color: #f7f7f7;
     color: rgba(20, 20, 20, 0.9);
 }
-
-/* 1 rem = 10px */
-html { font-size: 62.5%; }
 
 /* -----------[ 2. Typography ]---------- */
 
@@ -32,21 +27,19 @@ h1, h2, h3, h4, h5, h6 {
     margin: 1vh 0;
     padding: 0;
     font-weight: normal;
-    font-family: "Raleway", sans-serif;
 }
 
 /*   Fallback size      Responsive size   line height        letter spacing*/
-h1 { font-size: 4rem;   font-size: 7vh;   line-height: 1.2;  letter-spacing: .2rem;   }
-h2 { font-size: 3.6rem; font-size: 5.3vh; line-height: 1.25; letter-spacing: .1rem;   }
-h3 { font-size: 3.2rem; font-size: 4.6vh; line-height: 1.3;  letter-spacing: -.1rem;  }
-h4 { font-size: 2.8rem; font-size: 3.9vh; line-height: 1.35; letter-spacing: -.05rem; }
-h5 { font-size: 2.4rem; font-size: 3.3vh; line-height: 1.4;  letter-spacing: 0;       }
-h6 { font-size: 2.1rem; font-size: 3vh;   line-height: 1.45; letter-spacing: 0;       }
+h1 { font-size: 40px; font-size: 7vh;   line-height: 1.2;  letter-spacing: 3px; }
+h2 { font-size: 36px; font-size: 5.3vh; line-height: 1.25; letter-spacing: 2px; }
+h3 { font-size: 32px; font-size: 4.6vh; line-height: 1.3;  letter-spacing: 1px; }
+h4 { font-size: 28px; font-size: 3.9vh; line-height: 1.35; letter-spacing: 0;   }
+h5 { font-size: 24px; font-size: 3.3vh; line-height: 1.4;  letter-spacing: 0;   }
+h6 { font-size: 21px; font-size: 3vh;   line-height: 1.45; letter-spacing: 0;   }
 
 /* PARAGRAPHS */
-
-p { font-size: 1.7rem; /* Fallback */ font-size: 2.7vh; margin: 0; }
-p.lead { font-size: 2rem; font-size: 3.3vh; font-weight: 600; }
+p {      font-size: 17px; /* Fallback */ font-size: 2.7vh; margin: 0; }
+p.lead { font-size: 20px; /* Fallback */ font-size: 3.3vh; font-weight: 500; }
 
 /* STRONG */
 strong, .bold { font-weight: 900; }
@@ -62,12 +55,11 @@ hr.divider-sm { width: 80%; margin: 3vh auto; border: 1px solid #242424; }
 hr.divider-lg { width: 100%; margin: 5vh auto; border: 1px solid #242424; }
 
 /* LINKS */
-a { text-decoration: none; color: #45c4f7; transition: 0.2s; }
+a { font-size: 16px; text-decoration: none; color: #45c4f7; transition: 0.2s; }
 a:hover, a:focus { text-decoration: underline; color: #007cad; transition: 0.2s; }
 
 /* BUTTONS */
 button, .button, input[type="reset"], input[type="button"] {
-    font-family: "Raleway", sans-serif;
     display: inline-block;
     text-decoration: none;
     height: 40px;
@@ -278,7 +270,6 @@ section { padding: 1rem 0; }
 .nav-items .nav-item .dropdown-toggle:hover + .dropdown, .dropdown:hover { display: block; }
 
 .nav-toggle {
-    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
     text-decoration: none;
     color: #fff;
     text-align: center;
@@ -338,4 +329,54 @@ section { padding: 1rem 0; }
     background-color: black;
     margin: 12px 10%;
     padding: 0;
+}
+
+/* -----------[ 7. Animations ]---------- */
+
+/* Underline slide left on hover */
+
+.ul-slide-left {
+    display: inline;
+    text-decoration: none;
+    position: relative;
+}
+
+.ul-slide-left::after {
+    content: '';
+    display: inline-block;
+    width: 0;
+    height: 1px;
+    background: #292929;
+    position: absolute;
+    left: 0px;
+    bottom: 0px;
+    transition: 0.2s ease-in;
+}
+
+.ul-slide-left:hover::after {
+    width: 100%;
+}
+
+/* Underline slide right on hover */
+
+.ul-slide-right {
+    display: inline;
+    text-decoration: none;
+    position: relative;
+}
+
+.ul-slide-right::after {
+    content: '';
+    display: inline-block;
+    width: 0;
+    height: 1px;
+    background: #292929;
+    position: absolute;
+    right: 0px;
+    bottom: 0px;
+    transition: 0.2s ease-in;
+}
+
+.ul-slide-right:hover::after {
+    width: 100%;
 }
