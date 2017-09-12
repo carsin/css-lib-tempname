@@ -4,16 +4,33 @@
     box-sizing: border-box;
 }
 
+::-moz-selection {
+    background: #366284;
+    color: white;
+}
+
+::selection {
+    background: #366284;
+    color: white;
+}
+
+body {
+    background: url(https://static.pexels.com/photos/192136/pexels-photo-192136.jpeg) no-repeat center center fixed;
+    background-size: cover;
+    height: 100%;
+    width: 100%;
+}
+
 /* MENU
 ----------------------------------------*/
 
-.nav {
+nav {
     z-index: 99999;
     position: fixed;
     height: 10vh;
     line-height: 10vh;
     width: 100%;
-    font-size: 1.3em;
+    font-size: 2.3em;
     font-family: 'Raleway', sans-serif;
     font-weight: 700;
     background: rgba(255, 255, 255, .95);
@@ -22,60 +39,76 @@
     transition: .5s;
 }
 
-.nav .nav-right {
+nav img {
+    margin-top: 1vh;
+}
+
+nav .rest {
     text-align: right;
 }
 
-.nav:hover {
+nav:hover {
     background: rgba(255, 255, 255, 1);
 }
 
-.nav .nav-logo { 
-    margin-top: 1vh; 
+nav img {
     height: 8vh;
     width: auto;
-    transition: 0.2s; 
-}
-
-.nav .nav-logo:hover {
-    transform: scale(1.1);
+    -webkit-transition: 0.2s;
     transition: 0.2s;
 }
 
-.nav .text-menu {
+nav img:hover {
+    -webkit-transform: scale(1.1);
+    -ms-transform: scale(1.1);
+    transform: scale(1.1);
+    -webkit-transition: 0.2s;   
+    transition: 0.2s;
+}
+
+nav .text-menu {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
     display: flex;
+    -webkit-flex-flow: wrap row;
+    -ms-flex-flow: wrap row;
     flex-flow: wrap row;
+    -webkit-justify-content: space-around;
+    -ms-flex-pack: distribute;
     justify-content: space-around;
 }
 
-.nav p {
+nav p {
     display: inline;
     position: relative;
 }
 
-.nav .nav-link {
+nav > div > div > div > div > a {
     display: block;
+    font-family: 'Raleway', sans-serif;
     font-weight: 700;
     font-size: 0.75em;
     text-transform: uppercase;
     color: #366284;
     text-decoration: none;
+    -webkit-transition: .2s;
     transition: .2s;
 }
 
-.nav .nav-link:hover {
+nav > div > div > div > div > a:hover {
     color: #6f6f6f;
 }
 
-.nav .nav-dropdown:hover .nav-dropdown-list, .nav .nav-dropdown .nav-dropdown-list:hover {
+nav a:hover+ul, nav a+ul:hover {
     opacity: 1;
     visibility: visible;
 }
 
-.nav .nav-dropdown-list {
+nav ul {
     visibility: hidden;
     position: absolute;
-    top: 15vh;
+    top: 10vh;
     background: white;
     width: 20%;
     margin-left: -3%;
@@ -86,7 +119,7 @@
     box-shadow: 0 4px 8px #ccc;
 }
 
-.nav .nav-dropdown-link {
+nav li {
     list-style-type: none;
     width: 100%;
     font-size: .8em;
@@ -97,11 +130,11 @@
     transition: 0.2s;
 }
 
-.nav .nav-dropdown-link:hover {
+nav li:hover {
     background: #b5b5b5;
 }
 
-.nav li a {
+nav li a {
     text-decoration: none;
     color: #366284;
 }
@@ -113,8 +146,12 @@ nav .slash {
 nav .fa {
     display: none;
     color: #366284;
-    font-size: 7vh;
-    margin-top: 3.75vh;
+    font-size: 6vh;
+    margin-top: 2vh;
+}
+
+nav .fa:hover {
+    cursor: pointer;
 }
 
 
@@ -134,12 +171,12 @@ nav .fa {
     }
     
     nav .text-menu * {
-        height: 12vh;
+        height: 7vh;
     }
     
     nav .menu-appear {
         position: absolute;
-        top: 15vh;
+        top: 10vh;
         -webkit-transition: 0.5s;
         transition: 0.5s;
     }
@@ -182,7 +219,7 @@ nav .fa {
     
     nav .menu-appear {
         position: absolute;
-        top: 15vh;
+        top: 10vh;
         -webkit-transition: 0.5s;
         transition: 0.5s;
     }
@@ -191,8 +228,23 @@ nav .fa {
         display: block;
     }
 }    
-.nav-left, .nav-right {
+    
+.row {
+    width: 95%;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.quarter, .rest {
     text-align: left;
     line-height: 10vh;
-    float: left;
+    float:left;
+}
+
+.quarter {
+    width: 23%;
+}
+
+.rest {
+    width: 73%;
 }
