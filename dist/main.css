@@ -5,23 +5,19 @@
  *  > 3. Elements
  *  > 4. Grid
  *  > 5. Utilities
- * ----------------------------------------- */
+* ----------------------------------------- */
 
-/@import url('https://fonts.googleapis.com/css?family=Raleway|Cabin:400'); /* Raleway inspired by Skeleton */
+/* -----------[ 1. Global & Base Styles ]---------- */
 
 html, body {
     height: 100%;
     width: 100%;
     padding: 0;
     margin: 0;
-    font-family: "Cabin", sans-serif;
     line-height: 1.5;
     background-color: #f7f7f7;
     color: rgba(20, 20, 20, 0.9);
 }
-
-/* 1 rem = 10px */
-html { font-size: 62.5%; }
 
 /* -----------[ 2. Typography ]---------- */
 
@@ -29,21 +25,19 @@ h1, h2, h3, h4, h5, h6 {
     margin: 1vh 0;
     padding: 0;
     font-weight: normal;
-    font-family: "Raleway", sans-serif;
 }
 
 /*   Fallback size      Responsive size   line height        letter spacing*/
-h1 { font-size: 4rem;   font-size: 7vh;   line-height: 1.2;  letter-spacing: .2rem;   }
-h2 { font-size: 3.6rem; font-size: 5.3vh; line-height: 1.25; letter-spacing: .1rem;   }
-h3 { font-size: 3.2rem; font-size: 4.6vh; line-height: 1.3;  letter-spacing: -.1rem;  }
-h4 { font-size: 2.8rem; font-size: 3.9vh; line-height: 1.35; letter-spacing: -.05rem; }
-h5 { font-size: 2.4rem; font-size: 3.3vh; line-height: 1.4;  letter-spacing: 0;       }
-h6 { font-size: 2.1rem; font-size: 3vh;   line-height: 1.45; letter-spacing: 0;       }
+h1 { font-size: 40px; font-size: 7vh;   line-height: 1.2;  letter-spacing: 3px; }
+h2 { font-size: 36px; font-size: 5.3vh; line-height: 1.25; letter-spacing: 2px; }
+h3 { font-size: 32px; font-size: 4.6vh; line-height: 1.3;  letter-spacing: 1px; }
+h4 { font-size: 28px; font-size: 3.9vh; line-height: 1.35; letter-spacing: 0;   }
+h5 { font-size: 24px; font-size: 3.3vh; line-height: 1.4;  letter-spacing: 0;   }
+h6 { font-size: 21px; font-size: 3vh;   line-height: 1.45; letter-spacing: 0;   }
 
 /* PARAGRAPHS */
-
-p { font-size: 1.7rem; /* Fallback */ font-size: 2.7vh; margin: 0; }
-p.lead { font-size: 2rem; font-size: 3.3vh; font-weight: 600; }
+p {      font-size: 17px; /* Fallback */ font-size: 2.7vh; margin: 0; }
+p.lead { font-size: 20px; /* Fallback */ font-size: 3.3vh; font-weight: 500; }
 
 /* STRONG */
 strong, .bold { font-weight: 900; }
@@ -59,12 +53,11 @@ hr.divider-sm { width: 80%; margin: 3vh auto; border: 1px solid #242424; }
 hr.divider-lg { width: 100%; margin: 5vh auto; border: 1px solid #242424; }
 
 /* LINKS */
-a { text-decoration: none; color: #45c4f7; transition: 0.2s; }
+a { font-size: 16px; text-decoration: none; color: #45c4f7; transition: 0.2s; }
 a:hover, a:focus { text-decoration: underline; color: #007cad; transition: 0.2s; }
 
 /* BUTTONS */
 button, .button, input[type="reset"], input[type="button"] {
-    font-family: "Raleway", sans-serif;
     display: inline-block;
     text-decoration: none;
     height: 40px;
@@ -97,12 +90,10 @@ section { padding: 1rem 0; }
 
 .row .col {
     width: 100%;
-    margin: 5px 0;
     float: left;
     -webkit-box-sizing: border-box;
     box-sizing: border-box;
     min-height: 1px;
-    border: 2px solid transparent; /* This is margin. border-color must be overwritten with columns own if custom color is present */
 }
 
 @media (min-width: 800px) {
