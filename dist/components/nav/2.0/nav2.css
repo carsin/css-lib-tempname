@@ -1,36 +1,15 @@
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
-::-moz-selection {
-    background: #366284;
-    color: white;
-}
-
 ::selection {
     background: #366284;
     color: white;
 }
 
-body {
-    background: url(https://static.pexels.com/photos/192136/pexels-photo-192136.jpeg) no-repeat center center fixed;
-    background-size: cover;
-    height: 100%;
-    width: 100%;
-}
-
-/* MENU
-----------------------------------------*/
-
-nav {
+.nav {
     z-index: 99999;
     position: fixed;
     height: 10vh;
     line-height: 10vh;
     width: 100%;
-    font-size: 2.3em;
+    font-size: 3.5vh;
     font-family: 'Raleway', sans-serif;
     font-weight: 700;
     background: rgba(255, 255, 255, .95);
@@ -39,56 +18,42 @@ nav {
     transition: .5s;
 }
 
-nav img {
+.nav .nav-icon {
     margin-top: 1vh;
+	height: 8vh;
+    width: auto;
+    transition: 0.2s;
 }
 
-nav .rest {
+.nav .nav-right {
     text-align: right;
 }
 
-nav:hover {
+.nav:hover {
     background: rgba(255, 255, 255, 1);
 }
 
-nav img {
-    height: 8vh;
-    width: auto;
-    -webkit-transition: 0.2s;
-    transition: 0.2s;
-}
-
-nav img:hover {
-    -webkit-transform: scale(1.1);
-    -ms-transform: scale(1.1);
+.nav .nav-icon:hover {
     transform: scale(1.1);
-    -webkit-transition: 0.2s;   
     transition: 0.2s;
 }
 
-nav .text-menu {
-    display: -webkit-box;
-    display: -webkit-flex;
-    display: -ms-flexbox;
+.nav .nav-items {
     display: flex;
-    -webkit-flex-flow: wrap row;
-    -ms-flex-flow: wrap row;
     flex-flow: wrap row;
-    -webkit-justify-content: space-around;
-    -ms-flex-pack: distribute;
     justify-content: space-around;
 }
 
-nav p {
+.nav p {
     display: inline;
     position: relative;
 }
 
-nav > div > div > div > div > a {
+.nav .nav-item a, .nav .nav-dropdown-item a {
     display: block;
     font-family: 'Raleway', sans-serif;
     font-weight: 700;
-    font-size: 0.75em;
+    font-size: 0.6em;
     text-transform: uppercase;
     color: #366284;
     text-decoration: none;
@@ -96,19 +61,19 @@ nav > div > div > div > div > a {
     transition: .2s;
 }
 
-nav > div > div > div > div > a:hover {
+.nav .nav-item a:hover, .nav .nav-dropdown-item a:hover {
     color: #6f6f6f;
 }
 
-nav a:hover+ul, nav a+ul:hover {
+.nav .nav-dropdown-item a:hover+ul, .nav .nav-dropdown-item a+ul:hover {
     opacity: 1;
     visibility: visible;
 }
 
-nav ul {
+.nav .nav-dropdown-item ul {
     visibility: hidden;
     position: absolute;
-    top: 10vh;
+    top: 6vh;
     background: white;
     width: 20%;
     margin-left: -3%;
@@ -119,10 +84,9 @@ nav ul {
     box-shadow: 0 4px 8px #ccc;
 }
 
-nav li {
+.nav .nav-dropdown-item ul li {
     list-style-type: none;
     width: 100%;
-    font-size: .8em;
     line-height: normal;
     text-align: left;
     padding: 8%;
@@ -130,34 +94,36 @@ nav li {
     transition: 0.2s;
 }
 
-nav li:hover {
+.nav .nav-dropdown-item ul li:hover {
     background: #b5b5b5;
 }
 
-nav li a {
+.nav .nav-dropdown-item ul li a {
     text-decoration: none;
     color: #366284;
 }
 
-nav .slash {
-    color: #d5d5d5;
-}
-
-nav .fa {
+.nav .mobile-toggle {
     display: none;
-    color: #366284;
-    font-size: 6vh;
-    margin-top: 2vh;
+	position: absolute;
+	right: 1vh;
+	top: 2.5vh;
 }
 
-nav .fa:hover {
+.nav .mobile-toggle .toggle-line {
+	margin-top: 1vh;
+	width: 5vh;
+	background-color: black;
+	height: 1vh;
+}
+
+.nav .mobile-toggle:hover {
     cursor: pointer;
 }
 
-
-@media (max-width: 750px) {
+@media (max-width: 800px) {
     
-    nav .text-menu {
+    .nav .nav-items {
         position: absolute;
         top: -85vh;
         left: 0;
@@ -170,26 +136,22 @@ nav .fa:hover {
         z-index: -1;
     }
     
-    nav .text-menu * {
+    .nav .nav-items * {
         height: 7vh;
     }
     
-    nav .menu-appear {
+    .nav .menu-appear {
         position: absolute;
         top: 10vh;
         -webkit-transition: 0.5s;
         transition: 0.5s;
     }
     
-    nav .fa {
+    .nav .mobile-toggle {
         display: block;
     }
     
-    nav .six {
-        width: 48%;
-    }
-    
-    nav .text-menu {
+    .nav .nav-items {
         display: -webkit-box;
         display: -webkit-flex;
         display: -ms-flexbox;
@@ -198,53 +160,30 @@ nav .fa:hover {
         -ms-flex-flow: wrap column;
         flex-flow: wrap column;
         position: absolute;
-        top: -85vh;
+        top: -90vh;
         left: 0;
         background: white;
         width: 100%;
-        height: 85vh;
+        height: 90vh;
         text-align: center;
         -webkit-transition: 0.5s;
         transition: 0.5s;
         z-index: -1;
     }
     
-    nav .text-menu * {
-        height: 12vh;
+    .nav .nav-items * {
+        height: 7vh;
     }
     
-    nav .text-menu a:hover+ul {
+    .nav .nav-items a:hover+ul {
         display: none;
     }
     
-    nav .menu-appear {
+    .nav .menu-appear {
         position: absolute;
         top: 10vh;
         -webkit-transition: 0.5s;
         transition: 0.5s;
     }
     
-    nav .fa {
-        display: block;
-    }
-}    
-    
-.row {
-    width: 95%;
-    margin: 0 auto;
-    text-align: center;
-}
-
-.quarter, .rest {
-    text-align: left;
-    line-height: 10vh;
-    float:left;
-}
-
-.quarter {
-    width: 23%;
-}
-
-.rest {
-    width: 73%;
-}
+} 
