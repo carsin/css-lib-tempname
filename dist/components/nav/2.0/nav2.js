@@ -1,9 +1,13 @@
 $(document).ready(function() {
     $(".mobile-toggle").click(function() {
-        $(".nav-items").toggleClass("menu-appear");
+        $(".mobile-toggle").toggleClass("toggled");
+        $(".nav-items").toggleClass("nav-appear");
+        $(".nav").toggleClass("toggled");
     });
   
     $(".nav .nav-items a").click(function() {
-        $(".nav-items").toggleClass("menu-appear");
+        $(".mobile-toggle").toggleClass("toggled");
+        $(".nav-items").toggleClass("nav-appear");
+        $(".nav").toggleClass("toggled");
     });
 });
