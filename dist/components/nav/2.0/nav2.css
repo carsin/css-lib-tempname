@@ -50,6 +50,7 @@ body {
 
 .nav .nav-items {
     text-align: right;
+    justify-content: space-around;
     display: flex;
     flex-flow: wrap row;
 }
@@ -119,16 +120,34 @@ body {
 
 .nav .mobile-toggle {
     display: none;
+    position: relative;
+    float: right;
+    height: 10vh;
+    margin-right: 3vh;
+    transition: .25s ease-in-out;
+}
+
+.nav .mobile-toggle:hover .toggle-line {
+    background: #ccc;
+}
+
+.nav .mobile-toggle.toggled:hover .toggle-line {
+    background: red;
 }
 
 .nav .mobile-toggle .toggle-line {
     display: block;
     height: 3px;
-    width: 3px;
+    width: 34px;
+    margin-bottom: 5px;
     background: black;
     opacity: 1;
     transform: rotate(0deg);
-    transition: .25s ease-in-out;
+    transition: .3s ease-in-out;
+}
+
+.toggle-line-bot {
+    margin-bottom: 0;
 }
 
 .nav .mobile-toggle:hover {
@@ -148,10 +167,6 @@ body {
         z-index: -1;
     }
     
-    .nav .nav-items * {
-        height: 7vh;
-    }
-    
     .nav .nav-appear {
         position: absolute;
         top: 10vh;
@@ -159,7 +174,10 @@ body {
     }
     
     .nav .mobile-toggle {
-        display: inline-block;
+        display: flex;
+        flex-direction: column;
+        align-content: center;
+        justify-content: center;
     }
     
     .nav .nav-items {
@@ -172,19 +190,23 @@ body {
         width: 100%;
         height: 90vh;
         text-align: center;
-        -webkit-transition: 0.5s;
-        transition: 0.5s;
+        transition: 0.3s;
         z-index: -1;
-    }
-    
-    .nav .nav-items * {
-        height: 7vh;
     }
     
     .nav .nav-dropdown-item:hover > ul, .nav .nav-dropdown-item a:hover > ul, .nav .nav-dropdown-item > ul:hover {
         display: none;
     }
-    
+
+    .nav .nav-items .nav-dropdown-item, .nav .nav-items .nav-item {
+        width: 75%;
+        border-bottom: 1px solid #ccc;
+    } 
+
+    .nav .nav-items:last-child {
+        border: none;
+    }
+
     .nav .nav-appear {
         position: absolute;
         top: 10vh;
@@ -196,3 +218,20 @@ body {
     }
     
 } 
+.mobile-toggle.toggled {
+    transform: rotate(-90deg);
+}
+
+.mobile-toggle.toggled .toggle-line-top {
+    transform: rotate(45deg);
+    transform-origin: 15% 15%;
+}
+
+ .mobile-toggle.toggled .toggle-line-mid {
+    opacity: 0;
+}
+
+ .mobile-toggle.toggled .toggle-line-bot {
+    transform: rotate(-45deg);
+    transform-origin: 15% 95%;
+}
