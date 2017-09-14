@@ -35,10 +35,6 @@ body {
     transition: 0.2s;
 }
 
-.nav .nav-right {
-    text-align: right;
-}
-
 .nav:hover {
     background: rgba(255, 255, 255, 1);
 }
@@ -53,6 +49,7 @@ body {
 }
 
 .nav .nav-items {
+    text-align: right;
     display: flex;
     flex-flow: wrap row;
 }
@@ -122,25 +119,16 @@ body {
 
 .nav .mobile-toggle {
     display: none;
-	position: relative;
-	float: right;
-	width: 7vw;
-	height: 8vh;
-    transform: rotate(0deg);
- 	transition: .5s ease-in-out;
-	margin: 0 3vh 0 0;
 }
 
 .nav .mobile-toggle .toggle-line {
-  display: block;
-  position: absolute;
-  height: 3px;
-  width: 100%;
-  background: black;
-  opacity: 1;
-  left: 0;
-  transform: rotate(0deg);
-  transition: .25s ease-in-out;
+    display: block;
+    height: 3px;
+    width: 3px;
+    background: black;
+    opacity: 1;
+    transform: rotate(0deg);
+    transition: .25s ease-in-out;
 }
 
 .nav .mobile-toggle:hover {
@@ -208,31 +196,3 @@ body {
     }
     
 } 
-.mobile-toggle .toggle-line-top {
-    top: 2.5vh;
-    transform-origin: left center;
-}
-
-.mobile-toggle .toggle-line-mid {
-    top: 4vh;
-}
-
-.mobile-toggle .toggle-line-bot {
-    top: 5.5vh;
-	transform-origin: left center;
-}
-
-.mobile-toggle.toggled .toggle-line-top {
-    transform: rotate(45deg);
-	left: -0.7vw;
-}
-
-.mobile-toggle.toggled .toggle-line-mid {
-    width: 0%;
-    opacity: 0;
-}
-
-.mobile-toggle.toggled .toggle-line-bot {
-    transform: rotate(-45deg);
-	left: -0.7vw;
-}

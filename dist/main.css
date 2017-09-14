@@ -86,9 +86,9 @@ section { padding: 1rem 0; }
 
 /* -----------[ 4. Grid ]---------- */
 
-.row { margin: 0 auto 0 auto; }
+.row, .row-nowrap{ margin: 0 auto 0 auto; }
 
-.row .col {
+.row .col, .row-nowrap .col {
     width: 100%;
     float: left;
     -webkit-box-sizing: border-box;
@@ -96,85 +96,32 @@ section { padding: 1rem 0; }
     min-height: 1px;
 }
 
+.row-nowrap .col.w1 { margin-left: auto; left: auto; right: auto; width: 8.3333333333%; }
+.row-nowrap .col.w2 { margin-left: auto; left: auto; right: auto; width: 16.6666666667%; }
+.row-nowrap .col.w3 { margin-left: auto; left: auto; right: auto; width: 25%; }
+.row-nowrap .col.w4 { margin-left: auto; left: auto; right: auto; width: 33.3333333333%; }
+.row-nowrap .col.w5 { margin-left: auto; left: auto; right: auto; width: 41.6666666667%; }
+.row-nowrap .col.w6 { margin-left: auto; left: auto; right: auto; width: 50%; }
+.row-nowrap .col.w7 { margin-left: auto; left: auto; right: auto; width: 58.3333333333%; }
+.row-nowrap .col.w8 { margin-left: auto; left: auto; right: auto; width: 66.6666666667%; }
+.row-nowrap .col.w9 { margin-left: auto; left: auto; right: auto; width: 75%; }
+.row-nowrap .col.w10 { margin-left: auto; left: auto; right: auto; width: 83.3333333333%; }
+.row-nowrap .col.w11 { margin-left: auto; left: auto; right: auto; width: 91.6666666667%; }
+.row-nowrap .col.w12 { margin-left: auto; left: auto; right: auto; width: 100%; }
+
 @media (min-width: 800px) {
     .row .col.w1 { margin-left: auto; left: auto; right: auto; width: 8.3333333333%; }
-
-    .row .col.w2 {
-        margin-left: auto;
-        left: auto;
-        right: auto;
-        width: 16.6666666667%;
-    }
-
-    .row .col.w3 {
-        margin-left: auto;
-        left: auto;
-        right: auto;
-        width: 25%;
-    }
-
-    .row .col.w4 {
-        margin-left: auto;
-        left: auto;
-        right: auto;
-        width: 33.3333333333%;
-    }
-
-    .row .col.w5 {
-        margin-left: auto;
-        left: auto;
-        right: auto;
-        width: 41.6666666667%;
-    }
-
-    .row .col.w6 {
-        margin-left: auto;
-        left: auto;
-        right: auto;
-        width: 50%;
-    }
-
-    .row .col.w7 {
-        margin-left: auto;
-        left: auto;
-        right: auto;
-        width: 58.3333333333%;
-    }
-
-    .row .col.w8 {
-        margin-left: auto;
-        left: auto;
-        right: auto;
-        width: 66.6666666667%;
-    }
-
-    .row .col.w9 {
-        margin-left: auto;
-        left: auto;
-        right: auto;
-        width: 75%;
-    }
-
-    .row .col.w10 {
-        margin-left: auto;
-        left: auto;
-        right: auto;
-        width: 83.3333333333%;
-    }
-
-    .row .col.w11 {
-        margin-left: auto;
-        left: auto;
-        right: auto;
-        width: 91.6666666667%;
-    }
-
-    .row .col.w12 {
-        margin-left: auto;
-        left: auto;
-        right: auto;
-        width: 100%;
-    }
+    .row .col.w2 { margin-left: auto; left: auto; right: auto; width: 16.6666666667%; }
+    .row .col.w3 { margin-left: auto; left: auto; right: auto; width: 25%; }
+    .row .col.w4 { margin-left: auto; left: auto; right: auto; width: 33.3333333333%; }
+    .row .col.w5 { margin-left: auto; left: auto; right: auto; width: 41.6666666667%; }
+    .row .col.w6 { margin-left: auto; left: auto; right: auto; width: 50%; }
+    .row .col.w7 { margin-left: auto; left: auto; right: auto; width: 58.3333333333%; }
+    .row .col.w8 { margin-left: auto; left: auto; right: auto; width: 66.6666666667%; }
+    .row .col.w9 { margin-left: auto; left: auto; right: auto; width: 75%; }
+    .row .col.w10 { margin-left: auto; left: auto; right: auto; width: 83.3333333333%; }
+    .row .col.w11 { margin-left: auto; left: auto; right: auto; width: 91.6666666667%; }
+    .row .col.w12 { margin-left: auto; left: auto; right: auto; width: 100%; }
 }
 
 /* -----------[ 5. Utilities ]---------- */
