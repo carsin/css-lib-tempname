@@ -203,7 +203,7 @@ body {
         border-bottom: 1px solid #ccc;
     } 
 
-    .nav .nav-items:last-child {
+    .nav .nav-items .nav-item:last-child, .nav .nav-items .nav-dropdown-item:last-child {
         border: none;
     }
 
