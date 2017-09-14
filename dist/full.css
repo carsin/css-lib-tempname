@@ -203,6 +203,9 @@ section { padding: 1rem 0; }
 
 /* -----------[ 6. Nav Component ]---------- */
 
+./* MENU
+----------------------------------------*/
+
 .nav {
     position: fixed;
     height: 10vh;
@@ -276,7 +279,7 @@ section { padding: 1rem 0; }
     background: white;
     width: 20%;
     padding: 0;
-    margin: 0 0 0 -2vh;
+    margin: 0 0 0 -3vh;
     opacity: 0;
     -webkit-transition: 0.2s;
     transition: 0.2s;
@@ -357,6 +360,7 @@ section { padding: 1rem 0; }
 	
 	.nav .nav-icon {
 		height: 6vh;
+		position: absolute;
 	}
 	
 	.nav .no-mobile {
