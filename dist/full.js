@@ -8,12 +8,14 @@
 $(document).ready(function() {
     $(".mobile-toggle").click(function() {
         $(".mobile-toggle").toggleClass("toggled");
+        $("body").toggleClass("no-scroll");
         $(".nav-items").toggleClass("nav-appear");
         $(".nav").toggleClass("toggled");
     });
   
-    $(".nav .nav-items a").click(function() {
+    $(".nav.toggled .nav-items a").click(function() {
         $(".mobile-toggle").toggleClass("toggled");
+        $("body").toggleClass("no-scroll");
         $(".nav-items").toggleClass("nav-appear");
         $(".nav").toggleClass("toggled");
     });

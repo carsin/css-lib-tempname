@@ -211,8 +211,6 @@
     .nav.toggled {
         background-color: #fff;
     }
-    
-} 
 .mobile-toggle.toggled {
     transform: rotate(-90deg);
 }
@@ -222,11 +220,11 @@
     transform-origin: 15% 15%;
 }
 
- .mobile-toggle.toggled .toggle-line-mid {
+.mobile-toggle.toggled .toggle-line-mid {
     opacity: 0;
 }
 
- .mobile-toggle.toggled .toggle-line-bot {
+.mobile-toggle.toggled .toggle-line-bot {
     transform: rotate(-45deg);
     transform-origin: 15% 95%;
 }
