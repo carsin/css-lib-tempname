@@ -283,7 +283,7 @@ body.no-scroll {
     position: absolute;
     top: 7vh;
     background: white;
-    width: 15%;
+    width: 20%;
     box-shadow: 0 3px 3px 0 #ccc;
     padding: 0;
     margin: 0 0 0 -2vh;
@@ -305,9 +305,8 @@ body.no-scroll {
 }
 
 .nav .nav-dropdown-item ul li a {
-    line-height: 7vh;
-    height: 7vh;
 	margin: 0 2vh;
+    padding: 2vh 0;
     text-decoration: none;
 	border-bottom: 1px solid #ccc;
     color: rgba(20, 20, 20, 0.9);
@@ -330,7 +329,7 @@ body.no-scroll {
     background: #000;
 }
 
-.nav .mobile-toggle.toggled:hover .toggle-line {
+.nav .mobile-toggle.mobile-toggled:hover .toggle-line {
     background: red;
 }
 
@@ -402,25 +401,25 @@ body.no-scroll {
         transition: 0.5s;
     }
 
-    .nav.toggled {
+    .nav.nav-toggled {
         background-color: #fff;
     }
 }
 
-.mobile-toggle.toggled {
+.mobile-toggle.mobile-toggled {
     transform: rotate(-90deg);
 }
 
-.mobile-toggle.toggled .toggle-line-top {
+.mobile-toggle.mobile-toggled .toggle-line-top {
     transform: rotate(45deg);
     transform-origin: 15% 15%;
 }
 
-.mobile-toggle.toggled .toggle-line-mid {
+.mobile-toggle.mobile-toggled .toggle-line-mid {
     opacity: 0;
 }
 
-.mobile-toggle.toggled .toggle-line-bot {
+.mobile-toggle.mobile-toggled .toggle-line-bot {
     transform: rotate(-45deg);
     transform-origin: 15% 95%;
 }
