@@ -1,10 +1,3 @@
-/* TODO: License and name
- * ----------[ Table of Contents ]----------
- *  > 1. Navbar
-* ----------------------------------------- */
-
-/* -----------[ 1. Navbar ]---------- */
-
 var isFixed;
 
 $(document).ready(function() {

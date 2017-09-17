@@ -1,10 +1,12 @@
-/* TODO: License and name
+/* 
  * ----------[ Table of Contents ]----------
  *  > 1. Global & Base Styles
  *  > 2. Typography
  *  > 3. Elements
  *  > 4. Grid
  *  > 5. Utilities
+ *  > 6. Nav Component
+ *  > 7. Animations Component
 * ----------------------------------------- */
 
 /* -----------[ 1. Global & Base Styles ]---------- */
@@ -86,9 +88,9 @@ section { padding: 1rem 0; }
 
 /* -----------[ 4. Grid ]---------- */
 
-.row, .row-nowrap{ margin: 0 auto 0 auto; }
+.row { margin: 0 auto 0 auto; }
 
-.row .col, .row-nowrap .col {
+.row .col {
     width: 100%;
     float: left;
     -webkit-box-sizing: border-box;
@@ -96,32 +98,84 @@ section { padding: 1rem 0; }
     min-height: 1px;
 }
 
-.row-nowrap .col.w1 { margin-left: auto; left: auto; right: auto; width: 8.3333333333%; }
-.row-nowrap .col.w2 { margin-left: auto; left: auto; right: auto; width: 16.6666666667%; }
-.row-nowrap .col.w3 { margin-left: auto; left: auto; right: auto; width: 25%; }
-.row-nowrap .col.w4 { margin-left: auto; left: auto; right: auto; width: 33.3333333333%; }
-.row-nowrap .col.w5 { margin-left: auto; left: auto; right: auto; width: 41.6666666667%; }
-.row-nowrap .col.w6 { margin-left: auto; left: auto; right: auto; width: 50%; }
-.row-nowrap .col.w7 { margin-left: auto; left: auto; right: auto; width: 58.3333333333%; }
-.row-nowrap .col.w8 { margin-left: auto; left: auto; right: auto; width: 66.6666666667%; }
-.row-nowrap .col.w9 { margin-left: auto; left: auto; right: auto; width: 75%; }
-.row-nowrap .col.w10 { margin-left: auto; left: auto; right: auto; width: 83.3333333333%; }
-.row-nowrap .col.w11 { margin-left: auto; left: auto; right: auto; width: 91.6666666667%; }
-.row-nowrap .col.w12 { margin-left: auto; left: auto; right: auto; width: 100%; }
-
 @media (min-width: 800px) {
     .row .col.w1 { margin-left: auto; left: auto; right: auto; width: 8.3333333333%; }
-    .row .col.w2 { margin-left: auto; left: auto; right: auto; width: 16.6666666667%; }
-    .row .col.w3 { margin-left: auto; left: auto; right: auto; width: 25%; }
-    .row .col.w4 { margin-left: auto; left: auto; right: auto; width: 33.3333333333%; }
-    .row .col.w5 { margin-left: auto; left: auto; right: auto; width: 41.6666666667%; }
-    .row .col.w6 { margin-left: auto; left: auto; right: auto; width: 50%; }
-    .row .col.w7 { margin-left: auto; left: auto; right: auto; width: 58.3333333333%; }
-    .row .col.w8 { margin-left: auto; left: auto; right: auto; width: 66.6666666667%; }
-    .row .col.w9 { margin-left: auto; left: auto; right: auto; width: 75%; }
-    .row .col.w10 { margin-left: auto; left: auto; right: auto; width: 83.3333333333%; }
-    .row .col.w11 { margin-left: auto; left: auto; right: auto; width: 91.6666666667%; }
-    .row .col.w12 { margin-left: auto; left: auto; right: auto; width: 100%; }
+    .row .col.w2 {
+        margin-left: auto;
+        left: auto;
+        right: auto;
+        width: 16.6666666667%;
+    }
+
+    .row .col.w3 {
+        margin-left: auto;
+        left: auto;
+        right: auto;
+        width: 25%;
+    }
+
+    .row .col.w4 {
+        margin-left: auto;
+        left: auto;
+        right: auto;
+        width: 33.3333333333%;
+    }
+
+    .row .col.w5 {
+        margin-left: auto;
+        left: auto;
+        right: auto;
+        width: 41.6666666667%;
+    }
+
+    .row .col.w6 {
+        margin-left: auto;
+        left: auto;
+        right: auto;
+        width: 50%;
+    }
+
+    .row .col.w7 {
+        margin-left: auto;
+        left: auto;
+        right: auto;
+        width: 58.3333333333%;
+    }
+
+    .row .col.w8 {
+        margin-left: auto;
+        left: auto;
+        right: auto;
+        width: 66.6666666667%;
+    }
+
+    .row .col.w9 {
+        margin-left: auto;
+        left: auto;
+        right: auto;
+        width: 75%;
+    }
+
+    .row .col.w10 {
+        margin-left: auto;
+        left: auto;
+        right: auto;
+        width: 83.3333333333%;
+    }
+
+    .row .col.w11 {
+        margin-left: auto;
+        left: auto;
+        right: auto;
+        width: 91.6666666667%;
+    }
+
+    .row .col.w12 {
+        margin-left: auto;
+        left: auto;
+        right: auto;
+        width: 100%;
+    }
 }
 
 /* -----------[ 5. Utilities ]---------- */
@@ -135,8 +189,6 @@ section { padding: 1rem 0; }
 @media (min-width: 601px) { .container { width: 85%; } }
 @media (min-width: 993px) { .container { width: 70%; } }
 
-.container .row { margin-left: -0.75rem; margin-right: -0.75rem; }
-
 .text-center { text-align: center; }
 .text-right { text-align: right; }
 .text-left { text-align: left; }
@@ -145,3 +197,19 @@ section { padding: 1rem 0; }
 
 .fixed { position: fixed; }
 .container:after, .row:after, .u-cf { content: ""; clear: both; display: table; }
+
+body.no-scroll {
+    overflow: hidden;
+}
+
+@media (max-width: 800px) {
+    .no-mobile {
+        display: none;
+    }
+}
+
+@media (min-width: 800px) {
+    .mobile-only {
+        display: inline;
+    }
+}
