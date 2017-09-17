@@ -38,6 +38,7 @@ function toggleNavElements() {
     $(".mobile-toggle").toggleClass("mobile-toggled");
     $(".nav-items").toggleClass("nav-appear");
     $(".nav").toggleClass("nav-toggled");
+    $("body").toggleClass("no-scroll");
     if (!isFixed) { $(".nav").toggleClass("fixed"); }
 }
 

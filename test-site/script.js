@@ -1,3 +1,9 @@
+$(".nav-icon").click(function() {
+    $('html, body').animate({
+        scrollTop: $("#intro").offset().top
+    }, 500);
+});
+
 $("#typography-link").click(function() {
     $('html, body').animate({
         scrollTop: $("#typography").offset().top - (($(window).height() / 100) * 7)
