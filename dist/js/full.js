@@ -6,10 +6,10 @@
 /* -----------[ 1. Navbar ]---------- */
 
 var isFixed;
+var clicked = false;
 
 $(document).ready(function() {
     isFixed = $(".nav").hasClass("fixed");
-
     // Show nav on click
     $(".mobile-toggle").click(function() {
         toggleNavElements();
@@ -19,16 +19,21 @@ $(document).ready(function() {
             removeNavDropdownLinks();
         }
 
-        // Remove navbar when clicking on a link
-        $(".nav-appear a").click(function() {
-            toggleNavElements();
-            removeNavDropdownLinks();
-        });
+        if (!clicked) {
+            $(".nav-appear .nav-item a").click(hideNav);
+            clicked = true;
+        }
     });
 });
 
-// Show mobile full screen nav
+// Remove navbar when clicking on a link
+function hideNav() {
+    toggleNavElements();
+    console.log("click");
+    removeNavDropdownLinks();
+}
 
+// Show mobile full screen nav
 function toggleNavElements() {
     $(".mobile-toggle").toggleClass("mobile-toggled");
     $(".nav-items").toggleClass("nav-appear");
