@@ -17,7 +17,6 @@ html, body {
     padding: 0;
     margin: 0;
     line-height: 1.5;
-    background-color: #f7f7f7;
     color: rgba(20, 20, 20, 0.9);
 }
 
@@ -55,7 +54,7 @@ hr.divider-sm { width: 80%; margin: 3vh auto; border: 1px solid #242424; }
 hr.divider-lg { width: 100%; margin: 5vh auto; border: 1px solid #242424; }
 
 /* LINKS */
-a { font-size: 16px; text-decoration: none; color: #45c4f7; transition: 0.2s; }
+a { font-size: 17px; font-size: 2.7vh; text-decoration: none; color: #45c4f7; transition: 0.2s; }
 a:hover, a:focus { text-decoration: underline; color: #007cad; transition: 0.2s; }
 
 /* BUTTONS */
@@ -340,7 +339,7 @@ body.no-scroll {
 }
 
 .nav .mobile-toggle.mobile-toggled:hover .toggle-line {
-    background: red;
+    background: #c92c2c;
 }
 
 .toggle-line-bot {
@@ -349,13 +348,32 @@ body.no-scroll {
 
 .nav .mobile-toggle .toggle-line {
     display: block;
-    height: 2px;
-    width: 34px;
-    margin-bottom: 6px;
+    height: 3px;
+    width: 42px;
+    margin-bottom: 7px;
     background-color: rgba(20, 20, 20, 0.9);
     opacity: 1;
     transform: rotate(0deg);
-    transition: .3s ease-in-out;
+    transition: .25s ease-in-out;
+}
+
+.mobile-toggle.mobile-toggled {
+    transform: rotate(-90deg) translateX(4px);
+    transform-origin: center center;
+}
+
+.mobile-toggle.mobile-toggled .toggle-line-top {
+    transform: rotate(45deg);
+    transform-origin: 15% 15%;
+}
+
+.mobile-toggle.mobile-toggled .toggle-line-mid {
+    opacity: 0;
+}
+
+.mobile-toggle.mobile-toggled .toggle-line-bot {
+    transform: rotate(-45deg);
+    transform-origin: 15% 95%;
 }
 
 .nav .mobile-toggle:hover {
@@ -365,14 +383,8 @@ body.no-scroll {
 @media (max-width: 800px) {
 	.nav .nav-icon {
 		height: 6vh;
-        z-index: 2;
 	}
 
-    .nav .nav-icon-link {
-        z-index: 4;
-    }
-	
-    
     .nav .mobile-toggle {
         display: flex;
         flex-direction: column;
@@ -406,6 +418,10 @@ body.no-scroll {
         border-bottom: 1px solid #ccc;
     } 
 
+    .nav .nav-items .nav-item a {
+        font-size: 3.7vh;
+    }
+
     .nav .nav-appear {
         position: absolute;
         top: 7vh;
@@ -415,24 +431,6 @@ body.no-scroll {
     .nav.nav-toggled {
         background-color: #fff;
     }
-}
-
-.mobile-toggle.mobile-toggled {
-    transform: rotate(90deg);
-}
-
-.mobile-toggle.mobile-toggled .toggle-line-top {
-    transform: rotate(45deg);
-    transform-origin: 15% 15%;
-}
-
-.mobile-toggle.mobile-toggled .toggle-line-mid {
-    opacity: 0;
-}
-
-.mobile-toggle.mobile-toggled .toggle-line-bot {
-    transform: rotate(-45deg);
-    transform-origin: 15% 95%;
 }
 
 /* -----------[ 7. Animations ]---------- */
@@ -484,3 +482,4 @@ body.no-scroll {
 .ul-slide-right:hover::after {
     width: 100%;
 }
+
