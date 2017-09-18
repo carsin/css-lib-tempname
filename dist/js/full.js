@@ -28,9 +28,11 @@ $(document).ready(function() {
 
 // Remove navbar when clicking on a link
 function hideNav() {
-    toggleNavElements();
-    console.log("click");
-    removeNavDropdownLinks();
+	if ($(window).width() < 799){
+  	    toggleNavElements();
+        console.log("click");
+        removeNavDropdownLinks();
+    }
 }
 
 // Show mobile full screen nav
