@@ -1,6 +1,5 @@
 TODO LIST
 PRIORITY BY NUMBER
-1. Add ScrollSpy (https://jsfiddle.net/mekwall/up4nu/)
 2. Abandon these todo lists :P
 
 COMPLETE:
@@ -13,6 +12,7 @@ COMPLETE:
 9/04/17 Complete navbar template
 9/07/17 Typography
 9/07/17 Responsiveness
+9/21/17 Add ScrollSpy (https://jsfiddle.net/mekwall/up4nu/)
 
 WIP: 
 4. Basic elements styling
