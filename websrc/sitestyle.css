@@ -33,11 +33,9 @@
 
 #grid-column-list .col {
     border-color: #f7f7f7;
-    background-color: #ccc;
+    background-color: #cfcfcf;
     padding: 10px 0;
-    /* border-left: 1px solid #111; */
-    /* border-bottom: 1px solid #111; */
-    /* border-top: 1px solid #111; */
+    border: 3px solid white;
 }
 
 #grid-column-list .col:last-child {
