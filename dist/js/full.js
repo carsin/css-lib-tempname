@@ -1,7 +1,8 @@
 /* TODO: License and name
  * ----------[ Table of Contents ]----------
  *  > 1. Navbar
-* ----------------------------------------- */
+ *  > 2. Smooth scroll
+ * ----------------------------------------- */
 
 /* -----------[ 1. Navbar ]---------- */
 
@@ -62,7 +63,7 @@ function removeNavDropdownLinks() {
 var lastId;
 var nav = $(".nav-scrollspy");
 var navHeight = nav.outerHeight();
-var navItems = $(".nav-items").find(".nav-item a");
+var navItems = $(".nav").find(".nav-item a");
 var scrollItems = navItems.map(function() {
     var item = $($(this).attr("href"));
     if (item.length) { return item; }
@@ -74,17 +75,16 @@ navItems.click(function(e) {
     var href = $(this).attr("href");
     $('html, body').stop().animate({ 
         scrollTop: $(href).offset().top - navHeight
-    }, 400);
+    }, 200);
     e.preventDefault();
 });
 
 // Scroll event
 $(window).scroll(function(){
     // Get container scroll position
-    var fromTop = $(this).scrollTop() + navHeight;
+    var fromTop = $(this).scrollTop() + navHeight*5;
 
     // Get id of current scroll item
-    
     var cur = scrollItems.map(function(){
         if ($(this).offset().top < fromTop)
         return this;
@@ -100,4 +100,14 @@ $(window).scroll(function(){
         // Set / remove active class
         navItems.parent().removeClass("active").end().filter("[href='#"+id+"']").parent().addClass("active");
    }
+});
+
+/* -----------[ 2. Smooth Scroll ]---------- */
+
+$(".smooth-scroll").click(function(e) {
+    var href = $(this).attr("href");
+    $('html, body').stop().animate({ 
+        scrollTop: $(href).offset().top - navHeight
+    }, 200);
+    e.preventDefault();
 });

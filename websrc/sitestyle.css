@@ -1,19 +1,22 @@
-.container {
-    /* Border for testing purposes */
-    /* border-left: 1px solid #212121; */
-    /* border-right: 1px solid #212121; */
-}
-
 #intro {
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 80%;
+    height: 100vh;
+    background-color: #282828;
+    color: white;
     margin: auto;
 }
 
 #intro #code-logo {
     font-size: 20rem;
+}
+
+#intro-col2 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
 }
 
 #typography #text-list {

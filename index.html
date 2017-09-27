@@ -10,10 +10,10 @@
     <link rel="stylesheet" href="websrc/sitestyle.css">
 </head>
 <body>
-    <nav class="nav fixed nav-scrollspy">
+    <nav class="nav nav-transparent fixed nav-scrollspy">
         <div class="row container">
             <div class="col w6">
-                <a class="nav-icon-link" href="#"><img class="nav-icon" src="websrc/img/logos.png"></a>
+                <div class="nav-item"><a class="nav-icon-link" href="#intro"><img class="nav-icon" src="websrc/img/logo-white.png"></a></div>
                 <div class="mobile-toggle">
                     <div class="toggle-line toggle-line-top"></div>
                     <div class="toggle-line toggle-line-mid"></div>
@@ -36,14 +36,19 @@
    </nav>
 
    <section id="intro">
-        <div class="container text-center">
-            <h1 id="code-logo"><i class="fa fa-code" aria-hidden="true"></i></h1>
-            <h1>Veritas CSS</h1>
-            <p class="lead">A simple css template that doesn't get in the way of you making websites.</p>
-        </div>
+       <div class="row container">
+            <div class="col w8">
+                <h1 id="code-logo" class="text-center"><i class="fa fa-code" aria-hidden="true"></i></h1>
+                <div class="text-responsive">
+                    <h1>Veritas CSS</h1>
+                    <p class="lead">A simple css template that doesn't get in the way of you making websites.</p>
+                </div>
+            </div>
+            <div class="col w4" id="intro-col2">
+                <a class="button smooth-scroll" href="#typography">Learn More</a>
+            </div>
+       </div>
     </section>
-
-    <hr class="divider">
 
     <section id="typography" class="container">
         <h2 class="text-center">Typography</h2>
@@ -84,7 +89,7 @@
 
    <section id="grid" class="container text-center">
         <h2>Grid</h2>
-        <p>The grid is a using a responsive 12 column system that turns into a hierarchical row layout on smaller screens (>800 pixels)</p>
+        <p>The grid is a using a responsive 12 column system that turns into a hierarchical row layout on smaller screens (Less than 800 pixels wide)</p>
         <div id="grid-column-list">
             <div class="row">
                 <div class="col w1"><p>col w1</p></div>
