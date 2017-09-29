@@ -61,14 +61,13 @@ function removeNavDropdownLinks() {
 
 // Scrollspy variables
 var lastId;
-var nav = $(".nav-scrollspy");
+var nav = $(".nav");
 var navHeight = nav.outerHeight();
 var navItems = $(".nav").find(".nav-item a");
 var scrollItems = navItems.map(function() {
     var item = $($(this).attr("href"));
     if (item.length) { return item; }
 });
-
 
 // Default smooth scroll
 navItems.click(function(e) {
@@ -81,25 +80,27 @@ navItems.click(function(e) {
 
 // Scroll event
 $(window).scroll(function(){
-    // Get container scroll position
-    var fromTop = $(this).scrollTop() + navHeight*5;
+    if (nav.hascLass("nav-transparent-animated"))
+    if (nav.hasClass("nav-scrollspy")) {
+        // Get container scroll position
+        var fromTop = $(this).scrollTop() + navHeight * 5;
 
-    // Get id of current scroll item
-    var cur = scrollItems.map(function(){
-        if ($(this).offset().top < fromTop)
-        return this;
-    });
+        // Get id of current scroll item
+        var cur = scrollItems.map(function(){
+            if ($(this).offset().top < fromTop)
+            return this;
+        });
 
-    // Get the id of the current element
-    
-    cur = cur[cur.length-1];
-    var id = cur && cur.length ? cur[0].id : "";
+        // Get the id of the current element
+        cur = cur[cur.length-1];
+        var id = cur && cur.length ? cur[0].id : "";
 
-    if (lastId !== id) {
-        lastId = id;
-        // Set / remove active class
-        navItems.parent().removeClass("active").end().filter("[href='#"+id+"']").parent().addClass("active");
-   }
+        if (lastId !== id) {
+            lastId = id;
+            // Set / remove active class
+            navItems.parent().removeClass("active").end().filter("[href='#"+id+"']").parent().addClass("active");
+        }
+    }
 });
 
 /* -----------[ 2. Smooth Scroll ]---------- */

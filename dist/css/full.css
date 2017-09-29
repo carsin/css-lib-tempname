@@ -16,35 +16,96 @@ html, body {
     width: 100%;
     padding: 0;
     margin: 0;
-    line-height: 1.5;
+    font-size: 137.5%;
+    -webkit-font-smoothing: antialiased;
     color: rgba(20, 20, 20, 0.9);
 }
 
 /* -----------[ 2. Typography ]---------- */
-
-h1, h2, h3, h4, h5, h6 {
-    margin: 1vh 0;
-    padding: 0;
-    font-weight: normal;
+/* Copy & Lists */
+p {
+  line-height: 1.5rem;
+  margin-top: 1.5rem;
+  margin-bottom: 0;
 }
-
-/*   Fallback size      Responsive size   line height        letter spacing*/
-h1 { font-size: 40px; font-size: 7vh;   line-height: 1.2;  letter-spacing: 3px; }
-h2 { font-size: 36px; font-size: 5.3vh; line-height: 1.25; letter-spacing: 2px; }
-h3 { font-size: 32px; font-size: 4.6vh; line-height: 1.3;  letter-spacing: 1px; }
-h4 { font-size: 28px; font-size: 3.9vh; line-height: 1.35; letter-spacing: 0;   }
-h5 { font-size: 24px; font-size: 3.3vh; line-height: 1.4;  letter-spacing: 0;   }
-h6 { font-size: 21px; font-size: 3vh;   line-height: 1.45; letter-spacing: 0;   }
-
-/* PARAGRAPHS */
-p { font-size: 17px; /* Fallback */ font-size: 2.7vh; margin: 0; }
-p.lead { font-size: 20px; /* Fallback */ font-size: 3.3vh; font-weight: 500; }
-
-/* STRONG */
-strong, .bold { font-weight: 900; }
-
-/* EMPHASIS */
-em { font-weight: 200; }
+ul,
+ol {
+  margin-top: 1.5rem;
+  margin-bottom: 1.5rem;
+}
+ul li,
+ol li {
+  line-height: 1.5rem;
+}
+ul ul,
+ol ul,
+ul ol,
+ol ol {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+blockquote {
+  line-height: 1.5rem;
+  margin-top: 1.5rem;
+  margin-bottom: 1.5rem;
+}
+/* Headings */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  /* Change heading typefaces here */
+  margin-top: 1.5rem;
+  margin-bottom: 0;
+  line-height: 1.5rem;
+}
+h1 {
+  font-size: 4.242rem;
+  line-height: 4.5rem;
+  margin-top: 3rem;
+}
+h2 {
+  font-size: 2.828rem;
+  line-height: 3rem;
+  margin-top: 3rem;
+}
+h3 {
+  font-size: 1.414rem;
+}
+h4 {
+  font-size: 0.707rem;
+}
+h5 {
+  font-size: 0.4713333333333333rem;
+}
+h6 {
+  font-size: 0.3535rem;
+}
+/* Tables */
+table {
+  margin-top: 1.5rem;
+  border-spacing: 0px;
+  border-collapse: collapse;
+}
+table td,
+table th {
+  padding: 0;
+  line-height: 33px;
+}
+/* Code blocks */
+code {
+  vertical-align: bottom;
+}
+/* Leading paragraph text */
+.lead {
+  font-size: 1.414rem;
+}
+/* Hug the block above you */
+.hug {
+  margin-top: 0;
+}
 
 /* -----------[ 3. Elements ]---------- */
 
@@ -199,6 +260,8 @@ body.no-scroll {
     background: rgba(255, 255, 255, .95);
     transition: .5s;
 }
+
+.nav-top-anim { height: 10vh; line-height: 10vh; }
 
 /* Fixed nav */
 .nav.fixed { position: fixed; }
