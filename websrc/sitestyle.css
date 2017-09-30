@@ -31,14 +31,14 @@
 
 #article-header h2, #article-header h4, #article-header p {
     text-transform: uppercase;
-    letter-spacing: 0.1vw;
 }
 
 #grid-column-list .col {
-    border-color: #f7f7f7;
-    background-color: #cfcfcf;
-    padding: 10px 0;
+    background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.8)), url(https://static.pexels.com/photos/192136/pexels-photo-192136.jpeg) center center;
     border: 3px solid white;
+    background-attachment: fixed;
+    color: white;
+    padding: 10px 0;
 }
 
 #grid-column-list .col:last-child {

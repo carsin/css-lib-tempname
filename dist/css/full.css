@@ -272,7 +272,9 @@ body.no-scroll {
     transition: .5s;
 }
 
-.nav-top-anim { height: 10vh; line-height: 10vh; }
+.nav .nav-items {
+    transition: .5s;
+}
 
 /* Fixed nav */
 .nav.fixed { position: fixed; }

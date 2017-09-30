@@ -25,6 +25,7 @@ $(document).ready(function() {
             clicked = true;
         }
     });
+    scrollEvent();
 });
 
 // Remove navbar when clicking on a link
@@ -79,14 +80,15 @@ navItems.click(function(e) {
 });
 
 // Scroll event
-$(window).scroll(function(){
-    if (nav.hascLass("nav-transparent-animated"))
-    if (nav.hasClass("nav-scrollspy")) {
+$(window).scroll(scrollEvent);
+
+function scrollEvent() {
+    if (nav.hasClass("nav-scrollspy") || nav.hasClass("nav-background-adapt")) {
         // Get container scroll position
-        var fromTop = $(this).scrollTop() + navHeight * 5;
+        var fromTop = $(this).scrollTop() + navHeight;
 
         // Get id of current scroll item
-        var cur = scrollItems.map(function(){
+        var cur = scrollItems.map(function() {
             if ($(this).offset().top < fromTop)
             return this;
         });
@@ -95,13 +97,54 @@ $(window).scroll(function(){
         cur = cur[cur.length-1];
         var id = cur && cur.length ? cur[0].id : "";
 
-        if (lastId !== id) {
-            lastId = id;
-            // Set / remove active class
-            navItems.parent().removeClass("active").end().filter("[href='#"+id+"']").parent().addClass("active");
+        if (nav.hasClass("nav-scrollspy")) {
+            if (lastId !== id) {
+                lastId = id;
+                // Set / remove active class
+                navItems.parent().removeClass("active").end().filter("[href='#"+id+"']").parent().addClass("active");
+            }
+        }
+
+        if (nav.hasClass("nav-background-adapt")) {
+            if ($("#" + id).css("background-color") !== "rgba(0, 0, 0, 0)") {
+                nav.css("background-color", $("#" + id).css("background-color"));
+                $(".nav-items").css("background-color", $("#" + id).css("background-color"));
+            } else {
+                nav.css("background-color", "white");
+                $(".nav-items").css("background-color", "white");
+            }
+            var colorString = nav.css("background-color");
+            var colorsOnly = colorString.substring(colorString.indexOf('(') + 1, colorString.lastIndexOf(')')).split(/,\s*/);
+            var red = colorsOnly[0];
+            var green = colorsOnly[1];
+            var blue = colorsOnly[2];
+            var opacity = colorsOnly[3];
+
+            navItems.css("color", determineTextColor(red, green, blue));
         }
     }
-});
+}
+
+// Determines whether text should be black or white based on background color of nav
+function determineTextColor(red, green, blue) {
+    var c = [red/255, green/255, blue/255];
+
+    for (var i = 0; i < c.length; i++) {
+        if (c[i] <= 0.03928) {
+            c[i] = c[i] / 12.92;
+        } else {
+            c[i] = Math.pow((c[i] + 0.055) / 1.055, 2.4);
+        }
+    }
+
+    var l = 0.2126 * c[0] + 0.7152 * c[1] + 0.0722 * c[2];
+
+    if (l > 0.179) {
+        return "black";
+    } else {
+        return "white";
+    }
+}
 
 /* -----------[ 2. Smooth Scroll ]---------- */
 
