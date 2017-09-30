@@ -269,11 +269,15 @@ body.no-scroll {
     font-size: 3.5vh;
     font-weight: 700;
     background: rgba(255, 255, 255, .95);
-    transition: .5s;
+    transition: .1s;
 }
 
 .nav .nav-items {
-    transition: .5s;
+    transition: .1s;
+}
+
+.nav-background-adapt {
+    background-color: rgba(0, 0, 0, 0);
 }
 
 /* Fixed nav */

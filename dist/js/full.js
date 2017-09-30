@@ -70,7 +70,6 @@ var scrollItems = navItems.map(function() {
     if (item.length) { return item; }
 });
 
-// Default smooth scroll
 navItems.click(function(e) {
     var href = $(this).attr("href");
     $('html, body').stop().animate({ 
@@ -113,14 +112,14 @@ function scrollEvent() {
                 nav.css("background-color", "white");
                 $(".nav-items").css("background-color", "white");
             }
+
             var colorString = nav.css("background-color");
             var colorsOnly = colorString.substring(colorString.indexOf('(') + 1, colorString.lastIndexOf(')')).split(/,\s*/);
-            var red = colorsOnly[0];
-            var green = colorsOnly[1];
-            var blue = colorsOnly[2];
-            var opacity = colorsOnly[3];
 
-            navItems.css("color", determineTextColor(red, green, blue));
+            navItems.css("color", determineTextColor(colorsOnly[0], colorsOnly[1], colorsOnly[2]));
+            $(".nav").find(".nav-dropdown-title").css("color", determineTextColor(colorsOnly[0], colorsOnly[1], colorsOnly[2]));
+            $(".nav").find(".nav-dropdown-item ul li a").css("color", determineTextColor(colorsOnly[0], colorsOnly[1], colorsOnly[2]));
+            $(".nav").find(".toggle-line").css("background-color", determineTextColor(colorsOnly[0], colorsOnly[1], colorsOnly[2]));
         }
     }
 }
