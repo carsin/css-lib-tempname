@@ -2,7 +2,8 @@
  * ----------[ Table of Contents ]----------
  *  > 1. Navbar
  *  > 2. Smooth scroll
- * ----------------------------------------- */
+ * ----------------------------------------- 
+ * /
 
 /* -----------[ 1. Navbar ]---------- */
 
@@ -32,7 +33,6 @@ $(document).ready(function() {
 function hideNav() {
 	if ($(window).width() < 799){
   	    toggleNavElements();
-        console.log("click");
         removeNavDropdownLinks();
     }
 }
