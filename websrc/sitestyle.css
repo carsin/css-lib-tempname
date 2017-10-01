@@ -1,3 +1,16 @@
+body, html {
+    font-family: "Montserrat", sans-serif;
+}
+
+.feature-title {
+    color: black;
+}
+
+.feature-blurb {
+    color: #303030;
+    margin-bottom: 25px;
+}
+
 #intro {
     display: flex;
     justify-content: center;
@@ -33,6 +46,10 @@
     text-transform: uppercase;
 }
 
+#grid-column-list {
+    padding: 0 0 5vh 0;
+}
+
 #grid-column-list .col {
     background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.8)), url(https://static.pexels.com/photos/192136/pexels-photo-192136.jpeg) center center;
     border: 3px solid white;
@@ -41,7 +58,14 @@
     padding: 10px 0;
 }
 
+#grid-column-list .col p {
+    margin: 0;
+}
+
 #grid-column-list .col:last-child {
     /* border-right: 1px solid #111; */
 }
 
+#grid-features-showcase .col {
+    border: 10px solid white;
+}

@@ -17,105 +17,47 @@ html, body {
     padding: 0;
     margin: 0;
     -webkit-font-smoothing: antialiased;
-    font-size: 112.5%;
+    font-size: 20px;
     line-height: 1.4;
     color: rgba(20, 20, 20, 0.9);
 }
 
-body {
-    -webkit-hyphens: auto;
-    -ms-hyphens: auto;
-    hyphens: auto;
-}
-
 /* -----------[ 2. Typography ]---------- */
-/* Typography inspired by http://typeplate.com/ */
 
 h1, h2, h3, h4, h5, h6 {
-  text-rendering: optimizeLegibility;
-  line-height: 1;
-  margin-top: 0;
+    text-rendering: optimizeLegibility;
+    line-height: 1;
+    margin: 8px 0;
 }
 
-blockquote + figcaption cite {
-  display: block;
-  font-size: inherit;
-  text-align: right;
-}
+h1 { font-size: 60px; }
+h2 { font-size: 48px; }
+h3 { font-size: 42px; }
+h4 { font-size: 34px; }
+h5 { font-size: 28px; }
+h6 { font-size: 24px; }
 
-body {
-  word-wrap: break-word;
-}
-
-pre code {
-  word-wrap: normal;
-}
-
-h1 {
-  font-size: 4em;
-  margin-bottom: 2.42424rem;
-}
-
-h2 {
-  font-size: 3.33333em;
-  margin-bottom: 2.0202rem;
-}
-
-h3 {
-  font-size: 2.66667em;
-  margin-bottom: 1.61616rem;
-}
-
-h4 {
-  font-size: 2em;
-  margin-bottom: 1.21212rem;
-}
-
-h5 {
-  font-size: 1.33333em;
-  margin-bottom: 0.80808rem;
-}
-
-h6 {
-  font-size: 1em;
-  margin-bottom: 0.60606rem;
-}
-
-p {
-  margin: auto auto 1.5rem;
-}
-
-small {
-  font-size: 65%;
-}
-
-input, abbr, blockquote, code, kbd, q, samp, var {
-  -webkit-hyphens: none;
-  -ms-hyphens: none;
-  hyphens: none;
-}
-
-pre {
-  white-space: pre;
-}
+p { margin: 4px 0; font-size: 20px; line-height: 1.4; }
+small { font-size: 65%; }
+pre { white-space: pre; }
 
 pre code {
-  white-space: -moz-pre-wrap;
-  white-space: pre-wrap;
+    white-space: -moz-pre-wrap;
+    white-space: pre-wrap;
 }
 
 code {
-  white-space: pre;
-  font-family: monospace;
+    white-space: pre;
+    font-family: monospace;
 }
 
 abbr {
-  -webkit-font-variant: small-caps;
-  -moz-font-variant: small-caps;
-  -ms-font-variant: small-caps;
-  font-variant: small-caps;
-  font-weight: 600;
-  text-transform: lowercase;
+    -webkit-font-variant: small-caps;
+    -moz-font-variant: small-caps;
+    -ms-font-variant: small-caps;
+    font-variant: small-caps;
+    font-weight: 600;
+    text-transform: lowercase;
 }
 
 /* -----------[ 3. Elements ]---------- */
@@ -312,9 +254,7 @@ body.no-scroll {
 .nav:hover { background: rgba(255, 255, 255, 1); }
 .nav .nav-icon:hover { transform: scale(1.1); transition: 0.2s; }
 .nav .nav-item, .nav .nav-dropdown-item { margin: 0 auto; }
-.nav .nav-item.active a {
-    color: #009dff;
-}
+.nav .nav-item.active a { color: #009dff !important; }
 
 .nav .nav-items {
     text-align: right;
@@ -342,7 +282,7 @@ body.no-scroll {
 }
 
 /* Nav element hover color */
-.nav .nav-item a:hover, .nav .nav-dropdown-item a:hover { color: #00aeff; }
+.nav .nav-item a:hover, .nav .nav-dropdown-item a:hover { color: #00aeff !important; }
 
 /* Show dropdown menu on hover */
 .nav .nav-dropdown-item:hover > ul, .nav .nav-dropdown-item a:hover > ul, .nav .nav-dropdown-item > ul:hover { opacity: 1; visibility: visible; }
@@ -395,7 +335,7 @@ body.no-scroll {
 }
 
 .nav .mobile-toggle.mobile-toggled:hover .toggle-line {
-    background: #c92c2c;
+    background: #c92c2c !important;
 }
 
 .toggle-line-bot {

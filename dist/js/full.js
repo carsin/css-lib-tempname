@@ -108,9 +108,11 @@ function scrollEvent() {
             if ($("#" + id).css("background-color") !== "rgba(0, 0, 0, 0)") {
                 nav.css("background-color", $("#" + id).css("background-color"));
                 $(".nav-items").css("background-color", $("#" + id).css("background-color"));
+                $(".nav-items").find(".nav-dropdown-item ul").css("background-color", $("#" + id).css("background-color"));
             } else {
                 nav.css("background-color", "white");
                 $(".nav-items").css("background-color", "white");
+                $(".nav-items").find(".nav-dropdown-item ul").css("background-color", "white");
             }
 
             var colorString = nav.css("background-color");
