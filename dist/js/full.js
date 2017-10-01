@@ -70,21 +70,13 @@ var scrollItems = navItems.map(function() {
     if (item.length) { return item; }
 });
 
-navItems.click(function(e) {
-    var href = $(this).attr("href");
-    $('html, body').stop().animate({ 
-        scrollTop: $(href).offset().top - navHeight
-    }, 200);
-    e.preventDefault();
-});
-
 // Scroll event
 $(window).scroll(scrollEvent);
 
 function scrollEvent() {
     if (nav.hasClass("nav-scrollspy") || nav.hasClass("nav-background-adapt")) {
         // Get container scroll position
-        var fromTop = $(this).scrollTop() + navHeight;
+        var fromTop = $(this).scrollTop() + navHeight + 1;
 
         // Get id of current scroll item
         var cur = scrollItems.map(function() {
@@ -105,42 +97,42 @@ function scrollEvent() {
         }
 
         if (nav.hasClass("nav-background-adapt")) {
-            if ($("#" + id).css("background-color") !== "rgba(0, 0, 0, 0)") {
-                nav.css("background-color", $("#" + id).css("background-color"));
-                $(".nav-items").css("background-color", $("#" + id).css("background-color"));
-                $(".nav-items").find(".nav-dropdown-item ul").css("background-color", $("#" + id).css("background-color"));
-            } else {
-                nav.css("background-color", "white");
-                $(".nav-items").css("background-color", "white");
-                $(".nav-items").find(".nav-dropdown-item ul").css("background-color", "white");
+            if (nav.css("background-color") !== $("#" + id).css("background-color")) {
+                if ($("#" + id).css("background-color") !== "rgba(0, 0, 0, 0)") {
+                    nav.css("background-color", $("#" + id).css("background-color"));
+                    $(".nav-items").css("background-color", $("#" + id).css("background-color"));
+                    $(".nav-items").find(".nav-dropdown-item ul").css("background-color", $("#" + id).css("background-color"));
+                } else {
+                    nav.css("background-color", "white");
+                    $(".nav-items").css("background-color", "white");
+                    $(".nav-items").find(".nav-dropdown-item ul").css("background-color", "white");
+                }
+
+                var colorString = nav.css("background-color");
+                var colorsOnly = colorString.substring(colorString.indexOf('(') + 1, colorString.lastIndexOf(')')).split(/,\s*/);
+
+                navItems.css("color", determineTextColor(colorsOnly[0], colorsOnly[1], colorsOnly[2]));
+                $(".nav").find(".nav-dropdown-title").css("color", determineTextColor(colorsOnly[0], colorsOnly[1], colorsOnly[2]));
+                $(".nav").find(".nav-dropdown-item ul li a").css("color", determineTextColor(colorsOnly[0], colorsOnly[1], colorsOnly[2]));
+                $(".nav").find(".toggle-line").css("background-color", determineTextColor(colorsOnly[0], colorsOnly[1], colorsOnly[2]));
+
             }
-
-            var colorString = nav.css("background-color");
-            var colorsOnly = colorString.substring(colorString.indexOf('(') + 1, colorString.lastIndexOf(')')).split(/,\s*/);
-
-            navItems.css("color", determineTextColor(colorsOnly[0], colorsOnly[1], colorsOnly[2]));
-            $(".nav").find(".nav-dropdown-title").css("color", determineTextColor(colorsOnly[0], colorsOnly[1], colorsOnly[2]));
-            $(".nav").find(".nav-dropdown-item ul li a").css("color", determineTextColor(colorsOnly[0], colorsOnly[1], colorsOnly[2]));
-            $(".nav").find(".toggle-line").css("background-color", determineTextColor(colorsOnly[0], colorsOnly[1], colorsOnly[2]));
         }
     }
 }
 
-// Determines whether text should be black or white based on background color of nav
+// Determines whether color should be black or white based on input rgb 
 function determineTextColor(red, green, blue) {
     var c = [red/255, green/255, blue/255];
 
     for (var i = 0; i < c.length; i++) {
-        if (c[i] <= 0.03928) {
-            c[i] = c[i] / 12.92;
-        } else {
-            c[i] = Math.pow((c[i] + 0.055) / 1.055, 2.4);
-        }
+        // Disables jshint for this line
+        // jshint ignore:start 
+        c[i] <= 0.03928 ?  c[i] = c[i] / 12.92 : c[i] = Math.pow((c[i] + 0.055) / 1.055, 2.4);
+        // jshint ignore:end 
     }
 
-    var l = 0.2126 * c[0] + 0.7152 * c[1] + 0.0722 * c[2];
-
-    if (l > 0.179) {
+    if (0.2126 * c[0] + 0.7152 * c[1] + 0.0722 * c[2] > 0.179) {
         return "black";
     } else {
         return "white";
@@ -149,10 +141,11 @@ function determineTextColor(red, green, blue) {
 
 /* -----------[ 2. Smooth Scroll ]---------- */
 
+// Overrides default page scroll functionality & instead uses smooth scroll
 $(".smooth-scroll").click(function(e) {
     var href = $(this).attr("href");
     $('html, body').stop().animate({ 
-        scrollTop: $(href).offset().top - navHeight
-    }, 200);
+        scrollTop: $(href).offset().top - navHeight + 1
+    }, 325);
     e.preventDefault();
 });

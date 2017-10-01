@@ -46,13 +46,18 @@ body, html {
     text-transform: uppercase;
 }
 
+#grid {
+    background-color: rgb(100, 200, 250);
+}
+
 #grid-column-list {
     padding: 0 0 5vh 0;
 }
 
 #grid-column-list .col {
-    background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.8)), url(https://static.pexels.com/photos/192136/pexels-photo-192136.jpeg) center center;
-    border: 3px solid white;
+    text-align: center;
+    background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.8)), url(https://static.pexels.com/photos/351978/pexels-photo-351978.jpeg) center center;
+    border: 3px solid rgb(100, 200, 250);
     background-attachment: fixed;
     color: white;
     padding: 10px 0;
@@ -67,5 +72,5 @@ body, html {
 }
 
 #grid-features-showcase .col {
-    border: 10px solid white;
+    border: 10px solid rgb(100, 200, 250);
 }
