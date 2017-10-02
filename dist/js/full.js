@@ -98,24 +98,23 @@ function scrollEvent() {
 
         if (nav.hasClass("nav-background-adapt")) {
             if (nav.css("background-color") !== $("#" + id).css("background-color")) {
-                if ($("#" + id).css("background-color") !== "rgba(0, 0, 0, 0)") {
-                    nav.css("background-color", $("#" + id).css("background-color"));
-                    $(".nav-items").css("background-color", $("#" + id).css("background-color"));
-                    $(".nav-items").find(".nav-dropdown-item ul").css("background-color", $("#" + id).css("background-color"));
-                } else {
-                    nav.css("background-color", "white");
-                    $(".nav-items").css("background-color", "white");
-                    $(".nav-items").find(".nav-dropdown-item ul").css("background-color", "white");
-                }
+                var itemColor = $("#" + id).css("background-color");
 
-                var colorString = nav.css("background-color");
-                var colorsOnly = colorString.substring(colorString.indexOf('(') + 1, colorString.lastIndexOf(')')).split(/,\s*/);
+                // If item is transparent, fuck that shit. Use body as fallback color.
+                if (itemColor.includes("rgba")) { itemColor = $("body").css("background-color"); }
 
-                navItems.css("color", determineTextColor(colorsOnly[0], colorsOnly[1], colorsOnly[2]));
-                $(".nav").find(".nav-dropdown-title").css("color", determineTextColor(colorsOnly[0], colorsOnly[1], colorsOnly[2]));
-                $(".nav").find(".nav-dropdown-item ul li a").css("color", determineTextColor(colorsOnly[0], colorsOnly[1], colorsOnly[2]));
-                $(".nav").find(".toggle-line").css("background-color", determineTextColor(colorsOnly[0], colorsOnly[1], colorsOnly[2]));
+                // Set background color of nav & nav items to current section's background
+                nav.css("background-color", itemColor);
+                $(".nav-items").css("background-color", itemColor);
+                $(".nav-items").find(".nav-dropdown-item ul").css("background-color", itemColor);
 
+                var navColor = nav.css("background-color");
+                var navColorsOnly = navColor.substring(navColor.indexOf('(') + 1, navColor.lastIndexOf(')')).split(/,\s*/);
+
+                navItems.css("color", determineTextColor(navColorsOnly[0], navColorsOnly[1], navColorsOnly[2]));
+                $(".nav").find(".nav-dropdown-title").css("color", determineTextColor(navColorsOnly[0], navColorsOnly[1], navColorsOnly[2]));
+                $(".nav").find(".nav-dropdown-item ul li a").css("color", determineTextColor(navColorsOnly[0], navColorsOnly[1], navColorsOnly[2]));
+                $(".nav").find(".toggle-line").css("background-color", determineTextColor(navColorsOnly[0], navColorsOnly[1], navColorsOnly[2]));
             }
         }
     }
