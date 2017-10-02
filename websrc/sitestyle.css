@@ -4,11 +4,14 @@ body, html {
 
 .feature-title {
     color: black;
+    display: inline-block;
+    margin-right: 15px;
 }
 
 .feature-blurb {
     color: #303030;
     margin-bottom: 25px;
+    display: inline-block;
 }
 
 #intro {
@@ -44,6 +47,10 @@ body, html {
 
 #article-header h2, #article-header h4, #article-header p {
     text-transform: uppercase;
+}
+
+#article-content p {
+    margin-bottom: 20px;
 }
 
 #grid {

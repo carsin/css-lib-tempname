@@ -31,7 +31,7 @@ $(document).ready(function() {
 
 // Remove navbar when clicking on a link
 function hideNav() {
-	if ($(window).width() < 799){
+	if ($(window).width() <= 800){
   	    toggleNavElements();
         removeNavDropdownLinks();
     }
