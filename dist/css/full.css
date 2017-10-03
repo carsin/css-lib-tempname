@@ -255,7 +255,7 @@ body.no-scroll {
 .nav:hover { background: rgba(255, 255, 255, 1); }
 .nav .nav-icon:hover { transform: scale(1.1); transition: 0.2s; }
 .nav .nav-item, .nav .nav-dropdown-item { margin: 0 auto; }
-.nav .nav-item.active a { color: #009dff !important; }
+.nav .nav-item.active a { color: #676767 !important; }
 
 .nav .nav-items {
     text-align: right;
