@@ -1,5 +1,5 @@
 body, html {
-    font-family: "Montserrat", sans-serif;
+    font-family: "Source Sans Pro", sans-serif;
 }
 
 .feature-title {
@@ -52,6 +52,8 @@ body, html {
 
 #grid-column-list {
     padding: 0 0 5vh 0;
+    font-family: "Roboto Mono", monospace;
+    text-transform: uppercase;
 }
 
 #grid-column-list .col {
