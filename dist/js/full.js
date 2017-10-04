@@ -115,7 +115,6 @@ function scrollEvent() {
                 $(".nav").find(".nav-dropdown-title").css("color", determineTextColor(navColorsOnly[0], navColorsOnly[1], navColorsOnly[2]));
                 $(".nav").find(".nav-dropdown-item ul li a").css("color", determineTextColor(navColorsOnly[0], navColorsOnly[1], navColorsOnly[2]));
                 $(".nav").find(".toggle-line").css("background-color", determineTextColor(navColorsOnly[0], navColorsOnly[1], navColorsOnly[2]));
-		// TODO: Implement this http://jsfiddle.net/1t0heesf/1/ for .active nav elements
             }
         }
     }
