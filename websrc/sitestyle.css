@@ -28,6 +28,10 @@ body, html {
     font-size: 200px;
 }
 
+#typography {
+    /* background-color: white; */
+}
+
 #typography #text-list {
     /* border: 1px solid #191919; */
     display: inline-block;

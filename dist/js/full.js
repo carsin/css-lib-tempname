@@ -100,8 +100,10 @@ function scrollEvent() {
             if (nav.css("background-color") !== $("#" + id).css("background-color")) {
                 var itemColor = $("#" + id).css("background-color");
 
-                // If item is transparent, fuck that shit. Use body as fallback color.
-                if (itemColor === "rgba(0, 0, 0, 0)") { itemColor = $("body").css("background-color"); }
+                // If item is transparent, fuck that shit. Use body as fallback color unless nav has nav-allow-adaptive-transparency data attribute.
+                if (nav.data("nav-allow-adaptive-transparency") !== true) {
+                    if (itemColor === "rgba(0, 0, 0, 0)") { itemColor = $("body").css("background-color"); }
+                }
 
                 // Set background color of nav & nav items to current section's background
                 nav.css("background-color", itemColor);
