@@ -85,7 +85,7 @@ button, .button, input[type="reset"], input[type="button"] {
     letter-spacing: 0.1rem;
     border-radius: 3px;
     padding: 0 35px;
-    font-size: 1.3rem;
+    font-size: 20px;
     cursor: pointer;
     font-weight: 600;
     transition: 0.2s;
@@ -208,14 +208,17 @@ body.no-scroll { overflow: hidden; }
     height: 7vh;
     line-height: 7vh;
     width: 100%;
-    font-size: 3.5vh;
+    font-size: 24px;
     font-weight: 700;
     background: rgba(255, 255, 255, .95);
-    transition: .1s;
+    transition: .3s;
+    -webkit-box-shadow: 0px 3px 5px 0px rgba(0,0,0,0.25);
+    -moz-box-shadow: 0px 3px 5px 0px rgba(0,0,0,0.25);
+    box-shadow: 0px 3px 5px 0px rgba(0,0,0,0.25);
 }
 
 .nav .nav-items {
-    transition: .1s;
+    transition: .3s;
 }
 
 .nav-background-adapt {
@@ -266,7 +269,7 @@ margin: 0 2vh;
 .nav p {
     display: inline;
     position: relative;
-    font-size: 2vh;
+    font-size: 24px;
     line-height: 7vh;
 }
 
@@ -274,7 +277,7 @@ margin: 0 2vh;
 .nav .nav-item a, .nav .nav-dropdown-item a {
     display: block;
     font-weight: 400;
-    font-size: 2vh;
+    font-size: 24px;
     text-transform: uppercase;
     color: rgba(20, 20, 20, 0.9);
     text-decoration: none;
@@ -292,6 +295,9 @@ margin: 0 2vh;
     visibility: hidden;
     position: absolute;
     top: 7vh;
+    -webkit-box-shadow: 0px 3px 3px 0px rgba(0,0,0,0.25);
+    -moz-box-shadow: 0px 3px 3px 0px rgba(0,0,0,0.25);
+    box-shadow: 0px 3px 3px 0px rgba(0,0,0,0.25);
     background: white;
     width: 15%;
     padding: 0;
@@ -394,7 +400,7 @@ margin: 0 2vh;
         border-bottom: 1px solid #ccc;
     } 
 
-    .nav .nav-items .nav-item a { font-size: 3.7vh; }
+    .nav .nav-items .nav-item a { font-size: 30px; }
 
     .nav .nav-appear {
         position: absolute;

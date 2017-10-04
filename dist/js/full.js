@@ -92,7 +92,7 @@ function scrollEvent() {
             if (lastId !== id) {
                 lastId = id;
                 // Set / remove active class
-                navItems.parent().removeClass("active").end().filter("[href='#"+id+"']").parent().addClass("active");
+                navItems.parent().removeClass("active").end().filter("[href='#" + id + "']").parent().addClass("active");
             }
         }
 
@@ -101,20 +101,22 @@ function scrollEvent() {
                 var itemColor = $("#" + id).css("background-color");
 
                 // If item is transparent, fuck that shit. Use body as fallback color.
-                if (itemColor.includes("rgba")) { itemColor = $("body").css("background-color"); }
+                if (itemColor === "rgba(0, 0, 0, 0)") { itemColor = $("body").css("background-color"); }
 
                 // Set background color of nav & nav items to current section's background
                 nav.css("background-color", itemColor);
                 $(".nav-items").css("background-color", itemColor);
                 $(".nav-items").find(".nav-dropdown-item ul").css("background-color", itemColor);
+                setTimeout(function() {
+                    var navColor = nav.css("background-color");
+                    var navColorsOnly = navColor.substring(navColor.indexOf('(') + 1, navColor.lastIndexOf(')')).split(/,\s*/);
 
-                var navColor = nav.css("background-color");
-                var navColorsOnly = navColor.substring(navColor.indexOf('(') + 1, navColor.lastIndexOf(')')).split(/,\s*/);
+                    navItems.css("color", determineTextColor(navColorsOnly[0], navColorsOnly[1], navColorsOnly[2]));
+                    $(".nav").find(".nav-dropdown-title").css("color", determineTextColor(navColorsOnly[0], navColorsOnly[1], navColorsOnly[2]));
+                    $(".nav").find(".nav-dropdown-item ul li a").css("color", determineTextColor(navColorsOnly[0], navColorsOnly[1], navColorsOnly[2]));
+                    $(".nav").find(".toggle-line").css("background-color", determineTextColor(navColorsOnly[0], navColorsOnly[1], navColorsOnly[2]));
 
-                navItems.css("color", determineTextColor(navColorsOnly[0], navColorsOnly[1], navColorsOnly[2]));
-                $(".nav").find(".nav-dropdown-title").css("color", determineTextColor(navColorsOnly[0], navColorsOnly[1], navColorsOnly[2]));
-                $(".nav").find(".nav-dropdown-item ul li a").css("color", determineTextColor(navColorsOnly[0], navColorsOnly[1], navColorsOnly[2]));
-                $(".nav").find(".toggle-line").css("background-color", determineTextColor(navColorsOnly[0], navColorsOnly[1], navColorsOnly[2]));
+                }, 62);
             }
         }
     }
