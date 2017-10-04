@@ -5,8 +5,6 @@
  *  > 3. Elements
  *  > 4. Grid
  *  > 5. Utilities
- *  > 6. Nav Component
- *  > 7. Animations Component
 * ----------------------------------------- */
 
 /* -----------[ 1. Global & Base Styles ]---------- */
@@ -16,36 +14,51 @@ html, body {
     width: 100%;
     padding: 0;
     margin: 0;
-    line-height: 1.5;
-    background-color: #f7f7f7;
+    -webkit-font-smoothing: antialiased;
+    font-size: 20px;
+    line-height: 1.4;
     color: rgba(20, 20, 20, 0.9);
+    background-color: white;
 }
 
 /* -----------[ 2. Typography ]---------- */
 
 h1, h2, h3, h4, h5, h6 {
-    margin: 1vh 0;
-    padding: 0;
-    font-weight: normal;
+    text-rendering: optimizeLegibility;
+    line-height: 1;
+    margin: 8px 0;
 }
 
-/*   Fallback size      Responsive size   line height        letter spacing*/
-h1 { font-size: 40px; font-size: 7vh;   line-height: 1.2;  letter-spacing: 3px; }
-h2 { font-size: 36px; font-size: 5.3vh; line-height: 1.25; letter-spacing: 2px; }
-h3 { font-size: 32px; font-size: 4.6vh; line-height: 1.3;  letter-spacing: 1px; }
-h4 { font-size: 28px; font-size: 3.9vh; line-height: 1.35; letter-spacing: 0;   }
-h5 { font-size: 24px; font-size: 3.3vh; line-height: 1.4;  letter-spacing: 0;   }
-h6 { font-size: 21px; font-size: 3vh;   line-height: 1.45; letter-spacing: 0;   }
+h1 { font-size: 56px; }
+h2 { font-size: 48px; }
+h3 { font-size: 42px; }
+h4 { font-size: 38px; }
+h5 { font-size: 32px; }
+h6 { font-size: 24px; }
 
-/* PARAGRAPHS */
-p {      font-size: 17px; /* Fallback */ font-size: 2.7vh; margin: 0; }
-p.lead { font-size: 20px; /* Fallback */ font-size: 3.3vh; font-weight: 500; }
+p { margin: 4px 0; font-size: 20px; line-height: 1.4; }
 
-/* STRONG */
-strong, .bold { font-weight: 900; }
+small { font-size: 65%; }
+pre { white-space: pre; }
 
-/* EMPHASIS */
-em { font-weight: 200; }
+pre code {
+    white-space: -moz-pre-wrap;
+    white-space: pre-wrap;
+}
+
+code {
+    white-space: pre;
+    font-family: monospace;
+}
+
+abbr {
+    -webkit-font-variant: small-caps;
+    -moz-font-variant: small-caps;
+    -ms-font-variant: small-caps;
+    font-variant: small-caps;
+    font-weight: 600;
+    text-transform: lowercase;
+}
 
 /* -----------[ 3. Elements ]---------- */
 
@@ -55,7 +68,7 @@ hr.divider-sm { width: 80%; margin: 3vh auto; border: 1px solid #242424; }
 hr.divider-lg { width: 100%; margin: 5vh auto; border: 1px solid #242424; }
 
 /* LINKS */
-a { font-size: 16px; text-decoration: none; color: #45c4f7; transition: 0.2s; }
+a { text-decoration: none; color: #45c4f7; transition: 0.2s; }
 a:hover, a:focus { text-decoration: underline; color: #007cad; transition: 0.2s; }
 
 /* BUTTONS */
@@ -93,89 +106,62 @@ section { padding: 1rem 0; }
 .row .col {
     width: 100%;
     float: left;
-    -webkit-box-sizing: border-box;
     box-sizing: border-box;
     min-height: 1px;
 }
 
 @media (min-width: 800px) {
     .row .col.w1 { margin-left: auto; left: auto; right: auto; width: 8.3333333333%; }
-    .row .col.w2 {
-        margin-left: auto;
-        left: auto;
-        right: auto;
-        width: 16.6666666667%;
-    }
+    .row .col.w2 { margin-left: auto; left: auto; right: auto; width: 16.6666666667%; }
+    .row .col.w3 { margin-left: auto; left: auto; right: auto; width: 25%; }
+    .row .col.w4 { margin-left: auto; left: auto; right: auto; width: 33.3333333333%; }
+    .row .col.w5 { margin-left: auto; left: auto; right: auto; width: 41.6666666667%; }
+    .row .col.w6 { margin-left: auto; left: auto; right: auto; width: 50%; }
+    .row .col.w7 { margin-left: auto; left: auto; right: auto; width: 58.3333333333%; }
+    .row .col.w8 { margin-left: auto; left: auto; right: auto; width: 66.6666666667%; }
+    .row .col.w9 { margin-left: auto; left: auto; right: auto; width: 75%; }
+    .row .col.w10 { margin-left: auto; left: auto; right: auto; width: 83.3333333333%; }
+    .row .col.w11 { margin-left: auto; left: auto; right: auto; width: 91.6666666667%; }
+    .row .col.w12 { margin-left: auto; left: auto; right: auto; width: 100%; }
 
-    .row .col.w3 {
-        margin-left: auto;
-        left: auto;
-        right: auto;
-        width: 25%;
-    }
+    .row .col.push-w1 { left: 8.3333333333%; }
+    .row .col.push-w2 { left: 16.6666666667%; }
+    .row .col.push-w3 { left: 25%; }
+    .row .col.push-w4 { left: 33.3333333333%; }
+    .row .col.push-w5 { left: 41.6666666667%; }
+    .row .col.push-w6 { left: 50%; }
+    .row .col.push-w7 { left: 58.3333333333%; }
+    .row .col.push-w8 { left: 66.6666666667%;}
+    .row .col.push-w9 { left: 75%; } 
+    .row .col.push-w10 { left: 83.3333333333%; }
+    .row .col.push-w11 { left: 91.6666666667%; }
+    .row .col.push-w12 { left: 100%; }
 
-    .row .col.w4 {
-        margin-left: auto;
-        left: auto;
-        right: auto;
-        width: 33.3333333333%;
-    }
+    .row .col.pull-w1 { right: 8.3333333333%; }
+    .row .col.pull-w2 { right: 16.6666666667%; }
+    .row .col.pull-w3 { right: 25%; }
+    .row .col.pull-w4 { right: 33.3333333333%; }
+    .row .col.pull-w5 { right: 41.6666666667%; }
+    .row .col.pull-w6 { right: 50%; }
+    .row .col.pull-w7 { right: 58.3333333333%; } 
+    .row .col.pull-w8 { right: 66.6666666667%; }
+    .row .col.pull-w9 { right: 75%; } 
+    .row .col.pull-w10 { right: 83.3333333333%; }
+    .row .col.pull-w11 { right: 91.6666666667%; }
+    .row .col.pull-w12 { right: 100%; }
 
-    .row .col.w5 {
-        margin-left: auto;
-        left: auto;
-        right: auto;
-        width: 41.6666666667%;
-    }
-
-    .row .col.w6 {
-        margin-left: auto;
-        left: auto;
-        right: auto;
-        width: 50%;
-    }
-
-    .row .col.w7 {
-        margin-left: auto;
-        left: auto;
-        right: auto;
-        width: 58.3333333333%;
-    }
-
-    .row .col.w8 {
-        margin-left: auto;
-        left: auto;
-        right: auto;
-        width: 66.6666666667%;
-    }
-
-    .row .col.w9 {
-        margin-left: auto;
-        left: auto;
-        right: auto;
-        width: 75%;
-    }
-
-    .row .col.w10 {
-        margin-left: auto;
-        left: auto;
-        right: auto;
-        width: 83.3333333333%;
-    }
-
-    .row .col.w11 {
-        margin-left: auto;
-        left: auto;
-        right: auto;
-        width: 91.6666666667%;
-    }
-
-    .row .col.w12 {
-        margin-left: auto;
-        left: auto;
-        right: auto;
-        width: 100%;
-    }
+    .row .col.offset-w1 { margin-left: 8.3333333333%; }
+    .row .col.offset-w2 { margin-left: 16.6666666667%; }
+    .row .col.offset-w3 { margin-left: 25%; }
+    .row .col.offset-w4 { margin-left: 33.3333333333%; }
+    .row .col.offset-w5 { margin-left: 41.6666666667%; }
+    .row .col.offset-w6 { margin-left: 50%; }
+    .row .col.offset-w7 { margin-left: 58.3333333333%; }
+    .row .col.offset-w8 { margin-left: 66.6666666667%; }
+    .row .col.offset-w9 { margin-left: 75%; }
+    .row .col.offset-w10 { margin-left: 83.3333333333%; }
+    .row .col.offset-w11 { margin-left: 91.6666666667%; }
+    .row .col.offset-w12 { margin-left: 100%; }
 }
 
 /* -----------[ 5. Utilities ]---------- */
@@ -198,9 +184,7 @@ section { padding: 1rem 0; }
 .fixed { position: fixed; }
 .container:after, .row:after, .u-cf { content: ""; clear: both; display: table; }
 
-body.no-scroll {
-    overflow: hidden;
-}
+body.no-scroll { overflow: hidden; }
 
 @media (max-width: 800px) {
     .no-mobile {

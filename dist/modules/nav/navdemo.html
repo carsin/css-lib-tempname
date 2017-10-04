@@ -8,10 +8,10 @@
     <title>Veritas NAV Demo</title>
 </head>
 <body>
-    <nav class="nav fixed nav-scrollspy">
+    <nav id="main-nav" class="nav">
         <div class="row container">
             <div class="col w6">
-                <a class="nav-icon-link" href="#"><img class="nav-icon" src="websrc/img/logos.png"></a>
+                <div class="nav-item"><a class="nav-icon-link smooth-scroll" href="#intro"><img class="nav-icon" src="img/logos.png"></a></div>
                 <div class="mobile-toggle">
                     <div class="toggle-line toggle-line-top"></div>
                     <div class="toggle-line toggle-line-mid"></div>
@@ -20,8 +20,8 @@
             </div>
             <div class="col w6">
                 <div class="nav-items">
-                    <div class="nav-item"><a id="typography-link" href="#typography">Typography</a></div>
-                    <div class="nav-item"><a id="grid-link" href="#grid">Grid</a></div>
+                    <div class="nav-item"><a class="smooth-scroll" href="#typography">Typography</a></div>
+                    <div class="nav-item"><a class="smooth-scroll" href="#grid">Grid</a></div>
                     <div class="nav-dropdown-item no-mobile">
                         <a class="nav-dropdown-title" href="">Links <i class="no-mobile fa fa-sort-desc" aria-hidden="true"></i></a>
                         <ul>
@@ -31,7 +31,7 @@
                 </div>
             </div>
         </div>
-   </nav>
+    </nav>
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <script src="nav.js"></script>
