@@ -115,7 +115,7 @@ function scrollEvent() {
                         $(".nav").find(".nav-dropdown-title").css("color", determineTextColor(navColorsOnly[0], navColorsOnly[1], navColorsOnly[2]));
                         $(".nav").find(".nav-dropdown-item ul li a").css("color", determineTextColor(navColorsOnly[0], navColorsOnly[1], navColorsOnly[2]));
                         $(".nav").find(".toggle-line").css("background-color", determineTextColor(navColorsOnly[0], navColorsOnly[1], navColorsOnly[2]));
-                    }, 62);
+                    }, 70);
                 } else {
                     console.log("2");
                     nav.css("background-color", itemColor);
@@ -134,7 +134,7 @@ function scrollEvent() {
                             $(".nav").find(".nav-dropdown-title").css("color", determineTextColor(navColorsOnly[0], navColorsOnly[1], navColorsOnly[2]));
                             $(".nav").find(".nav-dropdown-item ul li a").css("color", determineTextColor(navColorsOnly[0], navColorsOnly[1], navColorsOnly[2]));
                             $(".nav").find(".toggle-line").css("background-color", determineTextColor(navColorsOnly[0], navColorsOnly[1], navColorsOnly[2]));
-                        }, 62);
+                        }, 70);
                     }
 
                 }
