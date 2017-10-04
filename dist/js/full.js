@@ -115,7 +115,7 @@ function scrollEvent() {
                         $(".nav").find(".nav-dropdown-title").css("color", determineTextColor(navColorsOnly[0], navColorsOnly[1], navColorsOnly[2]));
                         $(".nav").find(".nav-dropdown-item ul li a").css("color", determineTextColor(navColorsOnly[0], navColorsOnly[1], navColorsOnly[2]));
                         $(".nav").find(".toggle-line").css("background-color", determineTextColor(navColorsOnly[0], navColorsOnly[1], navColorsOnly[2]));
-                    }, 70);
+                    }, 90);
                 } else {
                     console.log("2");
                     nav.css("background-color", itemColor);
@@ -134,7 +134,7 @@ function scrollEvent() {
                             $(".nav").find(".nav-dropdown-title").css("color", determineTextColor(navColorsOnly[0], navColorsOnly[1], navColorsOnly[2]));
                             $(".nav").find(".nav-dropdown-item ul li a").css("color", determineTextColor(navColorsOnly[0], navColorsOnly[1], navColorsOnly[2]));
                             $(".nav").find(".toggle-line").css("background-color", determineTextColor(navColorsOnly[0], navColorsOnly[1], navColorsOnly[2]));
-                        }, 70);
+                        }, 90);
                     }
 
                 }
@@ -168,6 +168,6 @@ $(".smooth-scroll").click(function(e) {
     var href = $(this).attr("href");
     $('html, body').stop().animate({ 
         scrollTop: $(href).offset().top - navHeight + 1
-    }, 325);
+    }, 300);
     e.preventDefault();
 });
