@@ -1,11 +1,11 @@
-/* TODO: License and name
- * ----------[ Table of Contents ]----------
- *  > 1. Navbar
- *  > 2. Smooth scroll
- * ----------------------------------------- 
- * /
+/* 
+  ----------[ Table of Contents ]----------
+   > 1. Navbar
+   > 2. Smooth scroll
+  ----------------------------------------- 
+*/
 
-/* -----------[ 1. Navbar ]---------- */
+// -----------[ 1. Navbar ]---------- 
 
 var isFixed;
 var clicked = false;
@@ -138,7 +138,7 @@ function determineTextColor(red, green, blue) {
     }
 }
 
-/* -----------[ 2. Smooth Scroll ]---------- */
+// -----------[ 2. Smooth Scroll ]---------- 
 
 // Overrides default page scroll functionality & instead uses smooth scroll
 $(".smooth-scroll").click(function(e) {
