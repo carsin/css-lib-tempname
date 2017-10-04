@@ -1,17 +1,9 @@
-/* $(".nav-icon").click(function() { */
-//     $('html, body').animate({
-//         scrollTop: $("#intro").offset().top
-//     }, 500);
-// });
-//
-// $("#typography-link").click(function() {
-//     $('html, body').animate({
-//         scrollTop: $("#typography").offset().top - (($(window).height() / 100) * 7)
-//     }, 500);
-// });
-//
-// $("#grid-link").click(function() {
-//     $('html, body').animate({
-//         scrollTop: $("#grid").offset().top - (($(window).height() / 100) * 7)
-//     }, 500);
-/* }); */
+$(window).scroll(function() {
+    // logos.png
+    if ($(".nav-items .nav-item a").css("color") === "black") {
+        $("#nav-adaptive-icon").attr("src", "websrc/img/logos.png");
+    } else {
+        $("#nav-adaptive-icon").attr("src", "websrc/img/logo-white.png");
+    }
+});
+
