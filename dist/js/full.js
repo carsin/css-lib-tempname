@@ -103,22 +103,41 @@ function scrollEvent() {
                 // If item is transparent, fuck that shit. Use body as fallback color unless nav has nav-allow-adaptive-transparency data attribute.
                 if (nav.data("nav-allow-adaptive-transparency") !== true) {
                     if (itemColor === "rgba(0, 0, 0, 0)") { itemColor = $("body").css("background-color"); }
+                    console.log("1");
+                    // Set background color of nav & nav items to current section's background
+                    nav.css("background-color", itemColor);
+                    $(".nav-items").css("background-color", itemColor);
+                    $(".nav-items").find(".nav-dropdown-item ul").css("background-color", itemColor);
+                    setTimeout(function() {
+                        var navColor = nav.css("background-color");
+                        var navColorsOnly = navColor.substring(navColor.indexOf('(') + 1, navColor.lastIndexOf(')')).split(/,\s*/);
+                        navItems.css("color", determineTextColor(navColorsOnly[0], navColorsOnly[1], navColorsOnly[2]));
+                        $(".nav").find(".nav-dropdown-title").css("color", determineTextColor(navColorsOnly[0], navColorsOnly[1], navColorsOnly[2]));
+                        $(".nav").find(".nav-dropdown-item ul li a").css("color", determineTextColor(navColorsOnly[0], navColorsOnly[1], navColorsOnly[2]));
+                        $(".nav").find(".toggle-line").css("background-color", determineTextColor(navColorsOnly[0], navColorsOnly[1], navColorsOnly[2]));
+                    }, 62);
+                } else {
+                    console.log("2");
+                    nav.css("background-color", itemColor);
+                    $(".nav-items").css("background-color", itemColor);
+                    $(".nav-items").find(".nav-dropdown-item ul").css("background-color", itemColor);
+                    if (itemColor === "rgba(0, 0, 0, 0)") {
+                        navItems.css("color", "white");
+                        $(".nav").find(".nav-dropdown-title").css("color", "white");
+                        $(".nav").find(".nav-dropdown-item ul li a").css("color", "white");
+                        $(".nav").find(".toggle-line").css("background-color", "white");
+                    } else {
+                        setTimeout(function() {
+                            var navColor = nav.css("background-color");
+                            var navColorsOnly = navColor.substring(navColor.indexOf('(') + 1, navColor.lastIndexOf(')')).split(/,\s*/);
+                            navItems.css("color", determineTextColor(navColorsOnly[0], navColorsOnly[1], navColorsOnly[2]));
+                            $(".nav").find(".nav-dropdown-title").css("color", determineTextColor(navColorsOnly[0], navColorsOnly[1], navColorsOnly[2]));
+                            $(".nav").find(".nav-dropdown-item ul li a").css("color", determineTextColor(navColorsOnly[0], navColorsOnly[1], navColorsOnly[2]));
+                            $(".nav").find(".toggle-line").css("background-color", determineTextColor(navColorsOnly[0], navColorsOnly[1], navColorsOnly[2]));
+                        }, 62);
+                    }
+
                 }
-
-                // Set background color of nav & nav items to current section's background
-                nav.css("background-color", itemColor);
-                $(".nav-items").css("background-color", itemColor);
-                $(".nav-items").find(".nav-dropdown-item ul").css("background-color", itemColor);
-                setTimeout(function() {
-                    var navColor = nav.css("background-color");
-                    var navColorsOnly = navColor.substring(navColor.indexOf('(') + 1, navColor.lastIndexOf(')')).split(/,\s*/);
-
-                    navItems.css("color", determineTextColor(navColorsOnly[0], navColorsOnly[1], navColorsOnly[2]));
-                    $(".nav").find(".nav-dropdown-title").css("color", determineTextColor(navColorsOnly[0], navColorsOnly[1], navColorsOnly[2]));
-                    $(".nav").find(".nav-dropdown-item ul li a").css("color", determineTextColor(navColorsOnly[0], navColorsOnly[1], navColorsOnly[2]));
-                    $(".nav").find(".toggle-line").css("background-color", determineTextColor(navColorsOnly[0], navColorsOnly[1], navColorsOnly[2]));
-
-                }, 62);
             }
         }
     }

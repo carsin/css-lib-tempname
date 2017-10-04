@@ -281,7 +281,7 @@ body.no-scroll { overflow: hidden; }
     text-transform: uppercase;
     color: rgba(20, 20, 20, 0.9);
     text-decoration: none;
-    transition: .2s;
+    transition: .3s;
 }
 
 /* Nav element hover color */
@@ -303,7 +303,7 @@ body.no-scroll { overflow: hidden; }
     padding: 0;
     margin: 0 0 0 -2vh;
     opacity: 0;
-    transition: 0.2s;
+    transition: 0.3s;
 }
 
 /* Dropdown menu links */
@@ -312,7 +312,7 @@ body.no-scroll { overflow: hidden; }
     width: 100%;
     line-height: normal;
     text-align: left;
-    transition: 0.2s;
+    transition: 0.3s;
 }
 
 .nav .nav-dropdown-item ul li a {
@@ -389,7 +389,7 @@ body.no-scroll { overflow: hidden; }
         width: 100%;
         height: 93vh;
         text-align: left;
-        transition: 0.5s;
+        transition: 0.3s;
         z-index: 1;
     }
 	
