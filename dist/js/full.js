@@ -1,11 +1,11 @@
-/* 
+/*
   ----------[ Table of Contents ]----------
    > 1. Navbar
    > 2. Smooth scroll
-  ----------------------------------------- 
+  -----------------------------------------
 */
 
-// -----------[ 1. Navbar ]---------- 
+// -----------[ 1. Navbar ]----------
 
 var isFixed;
 var clicked = false;
@@ -141,15 +141,15 @@ function scrollEvent() {
     }
 }
 
-// Determines whether color should be black or white based on input rgb 
+// Determines whether color should be black or white based on input rgb
 function determineTextColor(red, green, blue) {
     var c = [red/255, green/255, blue/255];
 
     for (var i = 0; i < c.length; i++) {
         // Disables jshint for this line
-        // jshint ignore:start 
+        // jshint ignore:start
         c[i] <= 0.03928 ?  c[i] = c[i] / 12.92 : c[i] = Math.pow((c[i] + 0.055) / 1.055, 2.4);
-        // jshint ignore:end 
+        // jshint ignore:end
     }
 
     if (0.2126 * c[0] + 0.7152 * c[1] + 0.0722 * c[2] > 0.179) {
@@ -159,12 +159,12 @@ function determineTextColor(red, green, blue) {
     }
 }
 
-// -----------[ 2. Smooth Scroll ]---------- 
+// -----------[ 2. Smooth Scroll ]----------
 
 // Overrides default page scroll functionality & instead uses smooth scroll
 $(".smooth-scroll").click(function(e) {
     var href = $(this).attr("href");
-    $('html, body').stop().animate({ 
+    $('html, body').stop().animate({
         scrollTop: $(href).offset().top - navHeight + 1
     }, 300);
     e.preventDefault();

@@ -1,4 +1,4 @@
-/* 
+/*
  * ----------[ Table of Contents ]----------
  *  > 1. Global & Base Styles
  *  > 2. Typography
@@ -134,7 +134,7 @@ section { padding: 1rem 0; }
     .row .col.push-w6 { left: 50%; }
     .row .col.push-w7 { left: 58.3333333333%; }
     .row .col.push-w8 { left: 66.6666666667%;}
-    .row .col.push-w9 { left: 75%; } 
+    .row .col.push-w9 { left: 75%; }
     .row .col.push-w10 { left: 83.3333333333%; }
     .row .col.push-w11 { left: 91.6666666667%; }
     .row .col.push-w12 { left: 100%; }
@@ -145,9 +145,9 @@ section { padding: 1rem 0; }
     .row .col.pull-w4 { right: 33.3333333333%; }
     .row .col.pull-w5 { right: 41.6666666667%; }
     .row .col.pull-w6 { right: 50%; }
-    .row .col.pull-w7 { right: 58.3333333333%; } 
+    .row .col.pull-w7 { right: 58.3333333333%; }
     .row .col.pull-w8 { right: 66.6666666667%; }
-    .row .col.pull-w9 { right: 75%; } 
+    .row .col.pull-w9 { right: 75%; }
     .row .col.pull-w10 { right: 83.3333333333%; }
     .row .col.pull-w11 { right: 91.6666666667%; }
     .row .col.pull-w12 { right: 100%; }
@@ -376,7 +376,7 @@ body.no-scroll { overflow: hidden; }
         flex-direction: column;
         justify-content: center;
     }
- 
+
     .nav.nav-transparent .nav-appear, .nav.nav-transparent .nav-items { background-color: black; }
 
     .nav .nav-items {
@@ -392,13 +392,13 @@ body.no-scroll { overflow: hidden; }
         transition: 0.3s;
         z-index: 1;
     }
-	
+
     .nav .nav-dropdown-item:hover > ul, .nav .nav-dropdown-item a:hover > ul, .nav .nav-dropdown-item > ul:hover { display: none; }
 
     .nav .nav-items .nav-dropdown-item, .nav .nav-items .nav-item {
         width: 70%;
         border-bottom: 1px solid #ccc;
-    } 
+    }
 
     .nav .nav-items .nav-item a { font-size: 30px; }
 
