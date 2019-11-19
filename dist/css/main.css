@@ -73,12 +73,11 @@ a { text-decoration: none; color: #45c4f7; transition: 0.2s; }
 a:hover, a:focus { text-decoration: underline; color: #007cad; transition: 0.2s; }
 
 /* BUTTONS */
-button, .button, input[type="reset"], input[type="button"] {
+/* .button, input[type="reset"], input[type="button"] {
     display: inline-block;
     text-decoration: none;
     height: 40px;
     text-transform: uppercase;
-    background-color: #3dc3e5;
     border: none;
     color: white;
     letter-spacing: 0.1rem;
@@ -98,7 +97,57 @@ button:focus, .button:focus, input[type="reset"]:focus, input[type="button"]:foc
 
 a.button { line-height: 40px; }
 a.button:hover { color: black; transition: 0.2s; }
-section { padding: 1rem 0; }
+section { padding: 1rem 0; } */
+
+.button, input[type="reset"], input[type="button"] {
+    border: none;
+    text-decoration: none;
+    background: #000;
+    color: #fff;
+	font-size: 14px;
+	display: inline-block;
+	padding: 15px 20px;
+	position: relative;
+	z-index: 1;
+	overflow: hidden;
+	transition: all 0.4s cubic-bezier(0.25, 0.1, 0.2, 1);
+}
+
+.button:before, .button:after, input[type="reset"]:before, input[type="reset"]:after, input[type="button"]:before, input[type="button"]:after {
+	position: absolute;
+	content: '';
+	display: block;
+}
+
+.button:before, input[type="reset"]:before, input[type="button"]:before {
+	top: -120px;
+	left: 50px;
+	z-index: -1;
+	width: calc(100% + 140px);
+	height: 100px;
+	transition: all 0.4s cubic-bezier(0.25, 0.1, 0.2, 1);
+	transform: skew(70deg);
+	background: #ff3366;
+}
+
+.button:after, input[type="reset"]:after, input[type="button"]:after {
+	top: 0;
+	left: 0;
+	z-index: -2;
+	width: calc(100% - 2px);
+	height: calc(100% - 2px);
+	border: 1px solid #fff;
+}
+
+.button:hover:before, input[type="reset"]:hover:before, input[type="button"]:hover:before {
+	left: -50px;
+	top: -20px;
+}
+
+.button:focus, input[type="reset"]:focus, input[type="button"]:focus {
+    outline: 0;
+}
+
 
 /* -----------[ 4. Grid ]---------- */
 
