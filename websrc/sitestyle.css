@@ -19,8 +19,8 @@ body, html {
     justify-content: center;
     align-items: center;
     height: 100vh;
-    background-color: #282828;
-    color: white;
+    background-color: #ADD7F6;
+    color: #282828;
     margin: auto;
 }
 
@@ -29,7 +29,7 @@ body, html {
 }
 
 #typography {
-    background-color: white;
+    background-color: #fff;
 }
 
 #typography #text-list {
@@ -51,7 +51,7 @@ body, html {
 }
 
 #grid {
-    background-color: rgb(100, 200, 250);
+    background-color: #71A9F7;
 }
 
 #grid-column-list {
@@ -63,7 +63,7 @@ body, html {
 #grid-column-list .col {
     text-align: center;
     background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.8)), url(https://static.pexels.com/photos/351978/pexels-photo-351978.jpeg) center center;
-    border: 3px solid rgb(100, 200, 250);
+    border: 3px solid #71A9F7;
     background-attachment: fixed;
     color: white;
     padding: 10px 0;
@@ -74,5 +74,5 @@ body, html {
 }
 
 #grid-features-showcase .col {
-    border: 10px solid rgb(100, 200, 250);
+    border: 10px solid #71A9F7;
 }
