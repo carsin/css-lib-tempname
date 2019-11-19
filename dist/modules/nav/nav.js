@@ -83,7 +83,7 @@ function scrollEvent() {
             if (lastId !== id) {
                 lastId = id;
                 // Set / remove active class
-                navItems.parent().removeClass("active").end().filter("[href='#"+id+"']").parent().addClass("active");
+                navItems.parent().removeClass("active").end().filter("[href='#" + id + "']").parent().addClass("active");
             }
         }
 
@@ -91,35 +91,55 @@ function scrollEvent() {
             if (nav.css("background-color") !== $("#" + id).css("background-color")) {
                 var itemColor = $("#" + id).css("background-color");
 
-                // If item is transparent, fuck that shit. Use body as fallback color.
-                if (itemColor.includes("rgba")) { itemColor = $("body").css("background-color"); }
-
-                // Set background color of nav & nav items to current section's background
-                nav.css("background-color", itemColor);
-                $(".nav-items").css("background-color", itemColor);
-                $(".nav-items").find(".nav-dropdown-item ul").css("background-color", itemColor);
-
-                var navColor = nav.css("background-color");
-                var navColorsOnly = navColor.substring(navColor.indexOf('(') + 1, navColor.lastIndexOf(')')).split(/,\s*/);
-
-                navItems.css("color", determineTextColor(navColorsOnly[0], navColorsOnly[1], navColorsOnly[2]));
-                $(".nav").find(".nav-dropdown-title").css("color", determineTextColor(navColorsOnly[0], navColorsOnly[1], navColorsOnly[2]));
-                $(".nav").find(".nav-dropdown-item ul li a").css("color", determineTextColor(navColorsOnly[0], navColorsOnly[1], navColorsOnly[2]));
-                $(".nav").find(".toggle-line").css("background-color", determineTextColor(navColorsOnly[0], navColorsOnly[1], navColorsOnly[2]));
+                // If item is transparent, fuck that shit. Use body as fallback color unless nav has nav-allow-adaptive-transparency data attribute.
+                if (nav.data("nav-allow-adaptive-transparency") !== true) {
+                    if (itemColor === "rgba(0, 0, 0, 0)") { itemColor = $("body").css("background-color"); }
+                    // Set background color of nav & nav items to current section's background
+                    nav.css("background-color", itemColor);
+                    $(".nav-items").css("background-color", itemColor);
+                    $(".nav-items").find(".nav-dropdown-item ul").css("background-color", itemColor);
+                    setTimeout(function() {
+                        var navColor = nav.css("background-color");
+                        var navColorsOnly = navColor.substring(navColor.indexOf('(') + 1, navColor.lastIndexOf(')')).split(/,\s*/);
+                        navItems.css("color", determineTextColor(navColorsOnly[0], navColorsOnly[1], navColorsOnly[2]));
+                        $(".nav").find(".nav-dropdown-title").css("color", determineTextColor(navColorsOnly[0], navColorsOnly[1], navColorsOnly[2]));
+                        $(".nav").find(".nav-dropdown-item ul li a").css("color", determineTextColor(navColorsOnly[0], navColorsOnly[1], navColorsOnly[2]));
+                        $(".nav").find(".toggle-line").css("background-color", determineTextColor(navColorsOnly[0], navColorsOnly[1], navColorsOnly[2]));
+                    }, 90);
+                } else {
+                    nav.css("background-color", itemColor);
+                    $(".nav-items").css("background-color", itemColor);
+                    $(".nav-items").find(".nav-dropdown-item ul").css("background-color", itemColor);
+                    if (itemColor === "rgba(0, 0, 0, 0)") {
+                        $("#nav-adaptive-icon").attr("src", "websrc/img/logo-white.png");
+                        navItems.css("color", "white");
+                        $(".nav").find(".nav-dropdown-title").css("color", "white");
+                        $(".nav").find(".nav-dropdown-item ul li a").css("color", "white");
+                        $(".nav").find(".toggle-line").css("background-color", "white");
+                    } else {
+                        setTimeout(function() {
+                            var navColor = nav.css("background-color");
+                            var navColorsOnly = navColor.substring(navColor.indexOf('(') + 1, navColor.lastIndexOf(')')).split(/,\s*/);
+                            var newColor = determineTextColor(navColorsOnly[0], navColorsOnly[1], navColorsOnly[2]);
+                            navItems.css("color", newColor);
+                            $(".nav").find(".nav-dropdown-title").css("color", newColor);
+                            $(".nav").find(".nav-dropdown-item ul li a").css("color", newColor);
+                            $(".nav").find(".toggle-line").css("background-color", newColor);
+                            newColor === ("black") ? $("#nav-adaptive-icon").attr("src", "websrc/img/logos.png") : $("#nav-adaptive-icon").attr("src", "websrc/img/logo-white.png");
+                        }, 90);
+                    }
+                }
             }
         }
     }
 }
 
-// Determines whether color should be black or white based on input rgb 
+// Determines whether color should be black or white based on input rgb
 function determineTextColor(red, green, blue) {
     var c = [red/255, green/255, blue/255];
 
     for (var i = 0; i < c.length; i++) {
-        // Disables jshint for this line
-        // jshint ignore:start 
         c[i] <= 0.03928 ?  c[i] = c[i] / 12.92 : c[i] = Math.pow((c[i] + 0.055) / 1.055, 2.4);
-        // jshint ignore:end 
     }
 
     if (0.2126 * c[0] + 0.7152 * c[1] + 0.0722 * c[2] > 0.179) {

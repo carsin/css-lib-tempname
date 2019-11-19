@@ -10,6 +10,7 @@
 /* -----------[ 1. Global & Base Styles ]---------- */
 
 html, body {
+    font-family: "Helvetica", sans-serif;
     height: 100%;
     width: 100%;
     padding: 0;
