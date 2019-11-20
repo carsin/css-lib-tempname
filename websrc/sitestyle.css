@@ -19,6 +19,7 @@ body, html {
     justify-content: center;
     align-items: center;
     height: 100vh;
+    padding: 0;
     background-color: #ADD7F6;
     color: #282828;
     margin: auto;
@@ -78,6 +79,7 @@ body, html {
 }
 
 #elements {
+    /* Temporary */
     height: 100vh;
     background-color: #fff;
 }

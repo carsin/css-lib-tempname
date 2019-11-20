@@ -72,7 +72,7 @@ hr.divider-lg { width: 100%; margin: 5vh auto; border: 1px solid #242424; }
 a { text-decoration: none; color: #45c4f7; transition: 0.2s; }
 a:hover, a:focus { text-decoration: underline; color: #007cad; transition: 0.2s; }
 
-section { padding: 3rem 0; }
+section { padding: 7vh 0; }
 
 .button, input[type="submit"], input[type="reset"], input[type="button"] {
     display: inline-block;
