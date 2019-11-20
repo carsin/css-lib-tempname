@@ -76,3 +76,8 @@ body, html {
 #grid-features-showcase .col {
     border: 10px solid #71A9F7;
 }
+
+#elements {
+    height: 100vh;
+    background-color: #fff;
+}
