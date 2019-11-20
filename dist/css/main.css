@@ -72,37 +72,13 @@ hr.divider-lg { width: 100%; margin: 5vh auto; border: 1px solid #242424; }
 a { text-decoration: none; color: #45c4f7; transition: 0.2s; }
 a:hover, a:focus { text-decoration: underline; color: #007cad; transition: 0.2s; }
 
-/* BUTTONS */
-/* .button, input[type="reset"], input[type="button"] {
-    display: inline-block;
-    text-decoration: none;
-    height: 40px;
-    text-transform: uppercase;
-    border: none;
-    color: white;
-    letter-spacing: 0.1rem;
-    border-radius: 3px;
-    padding: 0 35px;
-    font-size: 1.3rem;
-    cursor: pointer;
-    font-weight: 600;
-    transition: 0.2s;
-    margin: 10px;
-}
-
-a.button:hover { text-decoration: none; }
-
-button:hover, .button:hover, input[type="reset"]:hover, input[type="button"]:hover,
-button:focus, .button:focus, input[type="reset"]:focus, input[type="button"]:focus { background-color: #018daf; transition: 0.2s; }
-
-a.button { line-height: 40px; }
-a.button:hover { color: black; transition: 0.2s; }
-section { padding: 1rem 0; } */
+section { padding: 3rem 0; }
 
 .button, input[type="reset"], input[type="button"] {
     border: none;
     text-decoration: none;
     background: #000;
+    letter-spacing: 3px;
     color: #fff;
 	font-size: 14px;
 	display: inline-block;
@@ -217,6 +193,7 @@ section { padding: 1rem 0; } */
 /* -----------[ 5. Utilities ]---------- */
 
 .container {
+    position: relative;
     margin: 0 auto;
     max-width: 1280px;
     width: 90%;
