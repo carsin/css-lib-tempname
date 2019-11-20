@@ -91,7 +91,6 @@ section { padding: 3rem 0; }
     box-sizing: border-box;
     -webkit-transition: all 0.3s cubic-bezier(0.02, 0.01, 0.47, 1);
     transition: all 0.3s cubic-bezier(0.02, 0.01, 0.47, 1);
-
 }
 
 .button:hover, input[type="submit"]:hover, input[type="reset"]:hover, input[type="button"]:hover, .button:focus, input[type="submit"]:focus, input[type="reset"]:focus,input[type="button"]:focus {

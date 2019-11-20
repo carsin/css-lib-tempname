@@ -81,3 +81,11 @@ body, html {
     height: 100vh;
     background-color: #fff;
 }
+
+#elements .row .w6 {
+    text-align: center;
+}
+
+#elements .row .w6 button, #elements .row .w6 a {
+    margin: 10px;
+}
