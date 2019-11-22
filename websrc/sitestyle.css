@@ -91,3 +91,7 @@ body, html {
 #elements .row .w6 button, #elements .row .w6 a {
     margin: 10px;
 }
+
+#elements #table-showcase {
+    margin: auto;
+}
