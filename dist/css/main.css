@@ -74,6 +74,7 @@ a:hover, a:focus { text-decoration: underline; color: #007cad; transition: 0.2s;
 
 section { padding: 7vh 0; }
 
+/* BUTTONS */
 .button, input[type="submit"], input[type="reset"], input[type="button"] {
     display: inline-block;
     padding: 12px 40px;
@@ -84,7 +85,7 @@ section { padding: 7vh 0; }
     background-color: #fff;
     letter-spacing: .1rem;
     border-radius: 3px;
-    border: 2px solid #000;
+    border: 2px solid #282828;
     text-transform: uppercase;
     cursor: pointer;
     font-weight: 600;
@@ -101,6 +102,64 @@ section { padding: 7vh 0; }
     -webkit-transition: all 0.3s cubic-bezier(0.02, 0.01, 0.47, 1);
     transition: all 0.3s cubic-bezier(0.02, 0.01, 0.47, 1);
 }
+
+.btn-blue {
+    border: 2px solid #71A9F7;
+    color: #71A9F7;
+}
+
+.btn-blue {
+    border: 2px solid #71A9F7;
+    color: #71A9F7;
+}
+
+/* TABLES */
+/* th, td {
+    padding: 12px 15px;
+    text-align: left;
+    border-bottom: 1px solid #E1E1E1; }
+th:first-child, td:first-child {
+    padding-left: 0;
+}
+th:last-child, td:last-child {
+    padding-right: 0;
+} */
+
+.table {
+    border-collapse: collapse;
+    border-spacing: 0;
+    empty-cells: show;
+    border: 1px solid #282828;
+}
+
+.table td, .table th {
+    margin: 0;
+    overflow: visible;
+    padding: 0.5em 1em;
+}
+
+.table thead {
+    background-color: #e1e1e1;
+    color: #000;
+    text-align: left;
+    vertical-align: bottom;
+}
+
+.table td {
+    background-color: transparent;
+}
+
+/* HORIZONTAL TABLE BORDERS */
+
+.table-hb td, .table-hb th {
+    border-bottom: 1px solid #282828;
+}
+
+/* VERTICAL TABLE BORDERS */
+.table-vb td, .table-vb th {
+    border-left: 1px solid #282828;
+}
+
 
 /* -----------[ 4. Grid ]---------- */
 
