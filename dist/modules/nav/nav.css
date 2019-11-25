@@ -1,20 +1,13 @@
 /* BASE CSS IS REQUIRED FOR NAV MODULE */
 
-:root {
-    --font-size: 20px;
-    --spacing-height: 1vh;
-    --spacing-width: 1vw;
-    --color-blue: #45A9F9;
-    --color-lightblue: #6FC1FF;
-}
-
 .nav {
     position: absolute;
-    height: calc(var(--spacing-height) * 7);
-    line-height: calc(var(--spacing-height) * 7);
+    height: 7vh;
+    line-height: 7vh;
     width: 100%;
     font-size: 3.5vh;
-    background: green;
+    font-weight: 700;
+    background: rgba(255, 255, 255, .95);
     transition: .1s;
 }
 
@@ -39,23 +32,24 @@
 .nav.nav-transparent .mobile-toggle .toggle-line { background-color: white; }
 .nav.nav-transparent .mobile-toggle:hover .toggle-line { background-color: #ccc; }
 .nav.nav-transparent .nav-dropdown-item ul li a {
-    margin: 0 calc(var(--spacing-width) * 2);
-	padding: calc(var(--spacing-height) * 2) 0;
+margin: 0 2vh;
+	padding: 2vh 0;
     text-decoration: none;
 	border-bottom: 1px solid #292929;
 }
 
 .nav .nav-icon {
     user-select: none;
-    margin-top: calc(var(--spacing-height) * .5);
+    margin-top: 0.5vh;
     z-index: 9999;
-	height: calc(var(--spacing-height) * 6);
+	height: 6vh;
     width: auto;
     transition: 0.2s;
     position: absolute;
 }
 
 .nav:hover { background: rgba(255, 255, 255, 1); }
+.nav .nav-icon:hover { transform: scale(1.1); transition: 0.2s; }
 .nav .nav-item, .nav .nav-dropdown-item { margin: 0 auto; }
 .nav .nav-item.active a {
     font-style: italic;
