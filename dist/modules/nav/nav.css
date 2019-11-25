@@ -80,6 +80,10 @@ margin: 0 2vh;
     transition: .2s;
 }
 
+.nav .nav-dropdown-item ul {
+    box-shadow: 1px 1px 8px #000;
+}
+
 /* Nav element hover color */
 .nav .nav-item a:hover, .nav .nav-dropdown-item a:hover {
     color: rgba(0, 0, 0, 0.3) !important;
