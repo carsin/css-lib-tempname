@@ -72,9 +72,8 @@ abbr {
 /* -----------[ 3. Elements ]---------- */
 
 /* HR DIVIDERS */
-hr.divider { max-width: 1600px; width: 90%; margin: calc(var(--spacing-height) * 7) auto; border: 1px solid #242424; }
-hr.divider-sm { width: 80%; margin: calc(var(--spacing-height) * 3) auto; border: 1px solid #242424; }
-hr.divider-lg { width: 100%; margin: calc(var(--spacing-height) * 5) auto; border: 1px solid #242424; }
+hr.divider { max-width: 1600px; width: 90vw; margin: calc(var(--spacing-height) * 7) auto; border: 1px solid #242424; }
+hr.divider-sm { width: 80vw; margin: calc(var(--spacing-height) * 3) auto; border: 1px solid #242424; }
 
 /* LINKS */
 a { text-decoration: none; color: var(--color-lightblue); transition: 0.2s; }
@@ -112,6 +111,8 @@ section { padding: calc() 0; }
     color: var(--color-blue);
 }
 
+/*  TABLES */
+
 .table {
     border-collapse: collapse;
     border-spacing: 0;
@@ -123,7 +124,7 @@ section { padding: calc() 0; }
 .table td, .table th {
     margin: 0;
     overflow: visible;
-    padding: 8px 24px;
+    padding: var(--spacing-height) var(--spacing-width);
 }
 
 .table thead {
@@ -137,13 +138,10 @@ section { padding: calc() 0; }
     background-color: transparent;
 }
 
-/* HORIZONTAL TABLE BORDERS */
-
 .table-hb td, .table-hb th {
     border-bottom: 1px solid #282828;
 }
 
-/* VERTICAL TABLE BORDERS */
 .table-vb td, .table-vb th {
     border-left: 1px solid #282828;
 }
