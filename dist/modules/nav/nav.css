@@ -87,8 +87,6 @@
 
 /* Show dropdown menu on hover */
 .nav .nav-dropdown-item:hover > ul, .nav .nav-dropdown-item a:hover > ul, .nav .nav-dropdown-item > ul:hover {
-    /* visibility: visible; */
-    /* transform: translateY(0); */
     max-height: 50vh;
     transition: max-height .4s cubic-bezier(.83,.19,.31,.97);
 }
@@ -98,7 +96,6 @@
     max-height: 0;
     overflow: hidden;
     transition: max-height .4s cubic-bezier(.83,.19,.31,.97);
-    /* transform: translateY(calc(-100% - 7vh)); */
     position: absolute;
     z-index: 100;
     background: white;
