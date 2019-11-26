@@ -103,17 +103,19 @@
 
 /* Dropdown menu links */
 .nav .nav-dropdown-item ul li {
-    box-shadow: 0.6vh 0.3vh 0.4vh rgba(10, 10, 10, 0.1);
+    box-shadow: 0.5vh 0.3vh 0.4vh rgba(0, 0, 0, 0.1);
+    box-shadow: 0.2vh 0 #fff;
     list-style-type: none;
     width: 100%;
     line-height: normal;
+    z-index: 2;
     text-align: left;
     transition: 0.2s;
     margin: 0;
 }
 
 .nav .nav-dropdown-item ul:last-child {
-    box-shadow: 0.3vh 0.6vh 0.4vh rgba(10, 10, 10, 0.1);
+    box-shadow: 0.5vh 0.3vh 0.4vh rgba(0, 0, 0, 0.1);
 }
 
 .nav .nav-dropdown-item ul li a {
