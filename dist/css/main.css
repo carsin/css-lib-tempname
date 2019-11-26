@@ -20,10 +20,10 @@ html, body {
     line-height: 1.4;
     color: rgba(20, 20, 20, 0.9);
     background-color: white;
-  }
-  
+}
+
   /* -----------[ 2. Typography ]---------- */
-  
+    
   h1, h2, h3, h4, h5, h6 {
     text-rendering: optimizeLegibility;
     line-height: 1;
