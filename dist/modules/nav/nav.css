@@ -32,7 +32,7 @@
 .nav.nav-transparent .mobile-toggle .toggle-line { background-color: white; }
 .nav.nav-transparent .mobile-toggle:hover .toggle-line { background-color: #ccc; }
 .nav.nav-transparent .nav-dropdown-item ul li a {
-margin: 0 2vh;
+    margin: 0 2vh;
 	padding: 2vh 0;
     text-decoration: none;
 	border-bottom: 1px solid #292929;
@@ -80,10 +80,6 @@ margin: 0 2vh;
     transition: .2s;
 }
 
-.nav .nav-dropdown-item ul {
-    box-shadow: 1px 1px 8px #000;
-}
-
 /* Nav element hover color */
 .nav .nav-item a:hover, .nav .nav-dropdown-item a:hover {
     color: rgba(0, 0, 0, 0.3) !important;
@@ -107,11 +103,17 @@ margin: 0 2vh;
 
 /* Dropdown menu links */
 .nav .nav-dropdown-item ul li {
+    box-shadow: 0.6vh 0.3vh 0.4vh rgba(10, 10, 10, 0.1);
     list-style-type: none;
     width: 100%;
     line-height: normal;
     text-align: left;
     transition: 0.2s;
+    margin: 0;
+}
+
+.nav .nav-dropdown-item ul:last-child {
+    box-shadow: 0.3vh 0.6vh 0.4vh rgba(10, 10, 10, 0.1);
 }
 
 .nav .nav-dropdown-item ul li a {
